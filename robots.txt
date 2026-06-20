@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://lbm-tech-website.netlify.app/sitemap.xml

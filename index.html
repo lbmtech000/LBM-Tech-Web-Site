@@ -1,0 +1,1129 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="LBM — Algerian deep-tech startup modernizing seawater desalination plants across North Africa with IoT, AI and predictive maintenance technology.">
+  <meta name="keywords" content="LBM, IoT, desalination, Algeria, startup, تحلية المياه, جزائر, إنترنت الأشياء, صيانة تنبؤية, أفريقيا الشمالية">
+  <meta name="robots" content="index, follow">
+  <meta property="og:title" content="LBM — Smart Desalination Technology · Algeria">
+  <meta property="og:description" content="Algerian startup modernizing seawater desalination with IoT & AI. Targeting North Africa and beyond.">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="https://lbm-tech-website.netlify.app/logo_lbm.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="LBM Smart Water Desalination Logo">
+  <meta property="og:url" content="https://lbm-tech-website.netlify.app/">
+  <meta property="og:site_name" content="LBM Technology">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="LBM — Smart Desalination Technology · Algeria">
+  <meta name="twitter:description" content="Algerian startup modernizing seawater desalination with IoT & AI. Targeting North Africa and beyond.">
+  <meta name="twitter:image" content="https://lbm-tech-website.netlify.app/logo_lbm.png">
+  <title>LBM — Smart Desalination · Made in Algeria 🇩🇿</title>
+  <link rel="icon" type="image/png" href="logo_lbm.png">
+  <link rel="shortcut icon" type="image/png" href="logo_lbm.png">
+  <link rel="apple-touch-icon" href="logo_lbm.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Sora:wght@300;400;600;700;800&family=Noto+Sans+Arabic:wght@300;400;600;700&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <!-- Google Analytics — Replace G-XXXXXXXXXX with your real Measurement ID from analytics.google.com -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-XXXXXXXXXX');
+  </script>
+</head>
+<body>
+
+<!-- NAVBAR -->
+<nav class="navbar" id="navbar">
+  <div class="nav-container">
+    <a href="#home" class="nav-logo">
+      <img src="logo_lbm.png" alt="LBM Logo" class="nav-logo-img">
+    </a>
+    <div class="nav-links" id="navLinks">
+      <a href="#home"        data-en="Home"      data-ar="الرئيسية">Home</a>
+      <a href="#services"   data-en="Services"   data-ar="خدماتنا">Services</a>
+      <a href="#for-everyone" data-en="For Everyone" data-ar="للجميع">For Everyone</a>
+      <a href="#how"        data-en="How It Works" data-ar="كيف نعمل">How It Works</a>
+      <a href="#vision"     data-en="Vision"     data-ar="رؤيتنا">Vision</a>
+      <a href="#about"      data-en="About"      data-ar="عنّا">About</a>
+      <a href="#team"       data-en="Team"       data-ar="الفريق">Team</a>
+      <a href="#roadmap"    data-en="Roadmap"    data-ar="خارطة الطريق">Roadmap</a>
+      <a href="#blog"       data-en="Blog"       data-ar="المدونة">Blog</a>
+      <a href="#faq"        data-en="FAQ"        data-ar="الأسئلة الشائعة">FAQ</a>
+      <a href="downloads.html" data-en="Apps"   data-ar="التطبيقات">Apps</a>
+      <a href="#contact"    data-en="Contact"    data-ar="تواصل معنا">Contact</a>
+    </div>
+    <div class="nav-actions">
+      <button class="theme-toggle" id="themeToggle" onclick="toggleTheme()" aria-label="Toggle theme">🌙</button>
+      <button class="lang-toggle"  id="langToggle"  onclick="toggleLang()">عربي</button>
+      <button class="menu-btn"     id="menuBtn"     onclick="toggleMenu()">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section class="hero" id="home">
+  <div class="hero-bg">
+    <div class="grid-overlay"></div>
+    <div class="water-rings">
+      <div class="ring ring-1"></div>
+      <div class="ring ring-2"></div>
+      <div class="ring ring-3"></div>
+    </div>
+    <div class="particles" id="particles"></div>
+  </div>
+
+  <div class="hero-content">
+    <div class="hero-badge" data-en="🇩🇿 Algerian Deep-Tech Startup · Year 1" data-ar="🇩🇿 ستارت آب جزائري عميق التقنية · السنة الأولى">🇩🇿 Algerian Deep-Tech Startup · Year 1</div>
+    <h1 class="hero-title">
+      <span class="line line-1" data-en="Upgrading Africa's" data-ar="نُحدِّث محطات">Upgrading Africa's</span>
+      <span class="line line-2 accent" data-en="Desalination Plants" data-ar="تحلية المياه في أفريقيا">Desalination Plants</span>
+    </h1>
+    <p class="hero-desc"
+       data-en="LBM is an Algerian startup on a mission to modernize seawater desalination infrastructure across North Africa — integrating IoT, real-time monitoring, and AI-driven predictive maintenance into existing plants."
+       data-ar="LBM ستارت آب جزائري في مهمة تحديث محطات تحلية مياه البحر في شمال أفريقيا — بدمج إنترنت الأشياء والمراقبة الفورية والصيانة التنبؤية بالذكاء الاصطناعي في المحطات القائمة.">
+      LBM is an Algerian startup on a mission to modernize seawater desalination infrastructure across North Africa — integrating IoT, real-time monitoring, and AI-driven predictive maintenance into existing plants.
+    </p>
+    <div class="hero-cta">
+      <a href="#services"  class="btn btn-primary" data-en="Our Solutions"    data-ar="حلولنا">Our Solutions</a>
+      <a href="#vision"    class="btn btn-outline"  data-en="Our Vision"       data-ar="رؤيتنا">Our Vision</a>
+    </div>
+    <div class="hero-stats">
+      <div class="stat">
+        <span class="stat-num">Y1</span>
+        <span class="stat-label" data-en="Founded 2025" data-ar="تأسست 2025">Founded 2025</span>
+      </div>
+      <div class="stat-divider"></div>
+      <div class="stat">
+        <span class="stat-num">🌍</span>
+        <span class="stat-label" data-en="North Africa First" data-ar="شمال أفريقيا أولاً">North Africa First</span>
+      </div>
+      <div class="stat-divider"></div>
+      <div class="stat">
+        <span class="stat-num">100%</span>
+        <span class="stat-label" data-en="Made in Algeria" data-ar="صُنع في الجزائر">Made in Algeria</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="hero-visual">
+    <div class="device-frame">
+      <div class="device-screen">
+        <div class="screen-header">
+          <span class="dot red"></span>
+          <span class="dot yellow"></span>
+          <span class="dot green"></span>
+          <span class="screen-title">LBM Monitor v1.0 — Live</span>
+        </div>
+        <div class="screen-content">
+          <div class="monitor-row">
+            <div class="monitor-label" data-en="Salinity"   data-ar="الملوحة">Salinity</div>
+            <div class="monitor-bar"><div class="bar-fill"       style="width:23%"></div></div>
+            <div class="monitor-val">23 ppt</div>
+          </div>
+          <div class="monitor-row">
+            <div class="monitor-label" data-en="Flow Rate"  data-ar="التدفق">Flow Rate</div>
+            <div class="monitor-bar"><div class="bar-fill blue"  style="width:78%"></div></div>
+            <div class="monitor-val">78 m³/h</div>
+          </div>
+          <div class="monitor-row">
+            <div class="monitor-label" data-en="Pressure"   data-ar="الضغط">Pressure</div>
+            <div class="monitor-bar"><div class="bar-fill teal"  style="width:62%"></div></div>
+            <div class="monitor-val">62 bar</div>
+          </div>
+          <div class="monitor-row">
+            <div class="monitor-label" data-en="pH Level"   data-ar="الحموضة">pH Level</div>
+            <div class="monitor-bar"><div class="bar-fill green" style="width:72%"></div></div>
+            <div class="monitor-val">7.2</div>
+          </div>
+          <div class="monitor-status">
+            <span class="status-dot"></span>
+            <span data-en="All systems operational" data-ar="جميع الأنظمة تعمل">All systems operational</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="hero-tag-dz">
+      <span>🇩🇿</span>
+      <span data-en="Built in Sétif, Algeria" data-ar="صُنع في سطيف، الجزائر">Built in Sétif, Algeria</span>
+    </div>
+  </div>
+</section>
+
+<!-- VISION BAND -->
+<section class="vision-band" id="vision">
+  <div class="container">
+    <div class="vision-inner">
+      <div class="vision-text">
+        <span class="section-tag" data-en="Our Mission" data-ar="مهمتنا">Our Mission</span>
+        <h2 data-en="From Algeria — For All of Africa" data-ar="من الجزائر — لكل أفريقيا">From Algeria — For All of Africa</h2>
+        <p data-en="We start where the problem is closest to us: Algeria and North Africa. Our goal is to modernize aging desalination infrastructure, then expand our technology across the entire African continent — where access to clean water is not just a comfort, but a matter of survival." data-ar="نبدأ من حيث المشكلة أقرب إلينا: الجزائر وشمال أفريقيا. هدفنا تحديث البنية التحتية لمحطات التحلية المتقادمة، ثم توسيع تقنيتنا عبر القارة الأفريقية بأسرها — حيث الوصول إلى المياه النظيفة ليس رفاهية، بل مسألة بقاء.">
+          We start where the problem is closest to us: Algeria and North Africa. Our goal is to modernize aging desalination infrastructure, then expand our technology across the entire African continent — where access to clean water is not just a comfort, but a matter of survival.
+        </p>
+      </div>
+      <div class="vision-map">
+        <div class="map-label" data-en="Expansion Roadmap" data-ar="خريطة التوسع">Expansion Roadmap</div>
+        <div class="map-stages">
+          <div class="map-stage active">
+            <div class="ms-dot active-dot"></div>
+            <div class="ms-line active-line"></div>
+            <div class="ms-info">
+              <strong data-en="Season 1 · 2025–2026" data-ar="الموسم 1 · 2025–2026">Season 1 · 2025–2026</strong>
+              <span data-en="🇩🇿 Algeria — Pilot Deployments" data-ar="🇩🇿 الجزائر — النشر التجريبي">🇩🇿 Algeria — Pilot Deployments</span>
+            </div>
+          </div>
+          <div class="map-stage">
+            <div class="ms-dot"></div>
+            <div class="ms-line"></div>
+            <div class="ms-info">
+              <strong data-en="Season 2 · 2026–2027" data-ar="الموسم 2 · 2026–2027">Season 2 · 2026–2027</strong>
+              <span data-en="🌍 North Africa — Scale Up" data-ar="🌍 شمال أفريقيا — التوسع">🌍 North Africa — Scale Up</span>
+            </div>
+          </div>
+          <div class="map-stage">
+            <div class="ms-dot"></div>
+            <div class="ms-line"></div>
+            <div class="ms-info">
+              <strong data-en="Season 3 · 2027+" data-ar="الموسم 3 · 2027+">Season 3 · 2027+</strong>
+              <span data-en="🌍 All of Africa" data-ar="🌍 كل أفريقيا">🌍 All of Africa</span>
+            </div>
+          </div>
+          <div class="map-stage last">
+            <div class="ms-dot future"></div>
+            <div class="ms-info">
+              <strong data-en="Future · Global" data-ar="المستقبل · عالمياً">Future · Global</strong>
+              <span data-en="🌐 Beyond Borders" data-ar="🌐 ما وراء الحدود">🌐 Beyond Borders</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SERVICES -->
+<section class="services" id="services">
+  <div class="container">
+    <div class="section-header">
+      <span class="section-tag" data-en="What We Build" data-ar="ما نبنيه">What We Build</span>
+      <h2 data-en="Our Core Solutions" data-ar="حلولنا الأساسية">Our Core Solutions</h2>
+      <p data-en="Technology designed specifically for the challenges of seawater desalination in Africa — starting with IoT integration, evolving toward full AI autonomy." data-ar="تقنية مصممة خصيصاً لتحديات تحلية مياه البحر في أفريقيا — تبدأ بتكامل IoT وتتطور نحو الاستقلالية الكاملة بالذكاء الاصطناعي.">
+        Technology designed specifically for the challenges of seawater desalination in Africa — starting with IoT integration, evolving toward full AI autonomy.
+      </p>
+    </div>
+    <div class="services-grid">
+
+      <div class="service-card featured">
+        <div class="service-icon">
+          <svg width="28" height="28" viewBox="0 0 28 28" fill="none">
+            <path d="M14 3C14 3 6 8 6 15C6 19.4183 9.58172 23 14 23C18.4183 23 22 19.4183 22 15C22 8 14 3 14 3Z" stroke="currentColor" stroke-width="1.8"/>
+            <circle cx="14" cy="15" r="3" fill="currentColor"/>
+            <path d="M5 14H9M19 14H23M14 5V9M14 19V23" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+          </svg>
+        </div>
+        <div class="service-badge-new" data-en="Core Offering" data-ar="الخدمة الأساسية">Core Offering</div>
+        <h3 data-en="Plant Digitization & IoT Integration" data-ar="رقمنة المحطات وتكامل IoT">Plant Digitization & IoT Integration</h3>
+        <p data-en="We install sensor networks and IoT modules into existing desalination plants — giving operators real-time visibility into every parameter without replacing their core infrastructure." data-ar="نثبّت شبكات استشعار ووحدات IoT في محطات التحلية القائمة — لمنح المشغلين رؤية فورية لكل معامل دون استبدال بنيتهم الأساسية.">
+          We install sensor networks and IoT modules into existing desalination plants — giving operators real-time visibility into every parameter without replacing their core infrastructure.
+        </p>
+        <div class="service-tags"><span>IoT</span><span>Sensors</span><span>Real-Time</span><span>Retrofit</span></div>
+      </div>
+
+      <div class="service-card">
+        <div class="service-icon">
+          <svg width="28" height="28" viewBox="0 0 28 28" fill="none">
+            <path d="M4 18L10 11L15 16L24 7" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
+            <path d="M4 24H24" stroke="currentColor" stroke-width="1.5"/>
+            <circle cx="24" cy="7" r="2" fill="currentColor"/>
+          </svg>
+        </div>
+        <h3 data-en="Remote Monitoring Dashboard" data-ar="لوحة المراقبة عن بُعد">Remote Monitoring Dashboard</h3>
+        <p data-en="A unified web and mobile dashboard giving plant managers complete operational awareness — from anywhere, at any time, on any device." data-ar="لوحة ويب وموبايل موحدة تمنح مديري المحطات وعياً تشغيلياً كاملاً — من أي مكان وفي أي وقت وعلى أي جهاز.">
+          A unified web and mobile dashboard giving plant managers complete operational awareness — from anywhere, at any time, on any device.
+        </p>
+        <div class="service-tags"><span>Web App</span><span>Mobile</span><span>Alerts</span></div>
+      </div>
+
+      <div class="service-card">
+        <div class="service-icon">
+          <svg width="28" height="28" viewBox="0 0 28 28" fill="none">
+            <rect x="3" y="3" width="9" height="9" rx="2" stroke="currentColor" stroke-width="1.8"/>
+            <rect x="16" y="3" width="9" height="9" rx="2" stroke="currentColor" stroke-width="1.8"/>
+            <rect x="3" y="16" width="9" height="9" rx="2" stroke="currentColor" stroke-width="1.8"/>
+            <path d="M20.5 16V22M17.5 19H23.5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
+          </svg>
+        </div>
+        <div class="service-badge-soon" data-en="In Development" data-ar="قيد التطوير">In Development</div>
+        <h3 data-en="Predictive Maintenance AI" data-ar="الصيانة التنبؤية بالذكاء الاصطناعي">Predictive Maintenance AI</h3>
+        <p data-en="Our next milestone: AI models that detect anomalies and predict equipment failures before they happen — dramatically reducing unplanned downtime and maintenance costs." data-ar="إنجازنا القادم: نماذج ذكاء اصطناعي تكتشف الشذوذات وتتنبأ بأعطال المعدات قبل حدوثها — مما يقلل بشكل كبير من وقت التوقف غير المخطط وتكاليف الصيانة.">
+          Our next milestone: AI models that detect anomalies and predict equipment failures before they happen — dramatically reducing unplanned downtime and maintenance costs.
+        </p>
+        <div class="service-tags"><span>AI / ML</span><span>Anomaly Detection</span><span>Predictive</span></div>
+      </div>
+
+      <div class="service-card">
+        <div class="service-icon">
+          <svg width="28" height="28" viewBox="0 0 28 28" fill="none">
+            <path d="M14 3L25 9V19L14 25L3 19V9L14 3Z" stroke="currentColor" stroke-width="1.8"/>
+            <circle cx="14" cy="14" r="4" stroke="currentColor" stroke-width="1.8"/>
+            <path d="M14 10V14L17 16" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+          </svg>
+        </div>
+        <h3 data-en="Energy Optimization" data-ar="تحسين استهلاك الطاقة">Energy Optimization</h3>
+        <p data-en="Desalination is energy-intensive. Our algorithms analyze consumption patterns and recommend optimizations — cutting energy costs by up to 25% in pilot tests." data-ar="التحلية عملية كثيفة الطاقة. تحلل خوارزمياتنا أنماط الاستهلاك وتوصي بالتحسينات — مما يقلل تكاليف الطاقة بنسبة تصل إلى 25% في الاختبارات التجريبية.">
+          Desalination is energy-intensive. Our algorithms analyze consumption patterns and recommend optimizations — cutting energy costs by up to 25% in pilot tests.
+        </p>
+        <div class="service-tags"><span>Analytics</span><span>Cost Reduction</span><span>Efficiency</span></div>
+      </div>
+
+      <div class="service-card">
+        <div class="service-icon">
+          <svg width="28" height="28" viewBox="0 0 28 28" fill="none">
+            <circle cx="14" cy="14" r="11" stroke="currentColor" stroke-width="1.8"/>
+            <path d="M14 7V14L19 17" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
+          </svg>
+        </div>
+        <div class="service-badge-soon" data-en="Coming Soon" data-ar="قريباً">Coming Soon</div>
+        <h3 data-en="Automated Process Control" data-ar="التحكم الآلي في العمليات">Automated Process Control</h3>
+        <p data-en="Closing the loop: automated adjustment of dosing, pressure, and flow parameters based on real-time sensor data — moving toward fully autonomous plant operation." data-ar="إغلاق الحلقة: الضبط الآلي لمعاملات الجرعات والضغط والتدفق بناءً على بيانات الاستشعار الفورية — نحو تشغيل مستقل بالكامل للمحطة.">
+          Closing the loop: automated adjustment of dosing, pressure, and flow based on real-time data — moving toward fully autonomous plant operation.
+        </p>
+        <div class="service-tags"><span>Automation</span><span>SCADA</span><span>Autonomous</span></div>
+      </div>
+
+      <div class="service-card">
+        <div class="service-icon">
+          <svg width="28" height="28" viewBox="0 0 28 28" fill="none">
+            <path d="M5 22L23 6M5 6H23V22" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
+            <circle cx="9" cy="18" r="3" stroke="currentColor" stroke-width="1.8"/>
+            <circle cx="19" cy="10" r="3" stroke="currentColor" stroke-width="1.8"/>
+          </svg>
+        </div>
+        <h3 data-en="Technical Consulting" data-ar="الاستشارات التقنية">Technical Consulting</h3>
+        <p data-en="We work directly with plant operators and water authorities to assess infrastructure, define digitization strategies, and implement solutions step by step." data-ar="نعمل مباشرة مع مشغلي المحطات وسلطات المياه لتقييم البنية التحتية وتحديد استراتيجيات الرقمنة وتنفيذ الحلول خطوة بخطوة.">
+          We work directly with plant operators and water authorities to assess infrastructure, define digitization strategies, and implement solutions step by step.
+        </p>
+        <div class="service-tags"><span>On-site</span><span>Strategy</span><span>Assessment</span></div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- FOR EVERYONE -->
+<section class="for-everyone" id="for-everyone">
+  <div class="container">
+    <div class="fe-grid">
+      <div class="fe-content">
+        <span class="section-tag" data-en="Beyond the Plant" data-ar="ما وراء المحطة الصناعية">Beyond the Plant</span>
+        <h2 data-en="From Industrial Plants to Every Household" data-ar="من المحطات الصناعية إلى كل بيت">From Industrial Plants to Every Household</h2>
+        <p data-en="Our core mission is modernizing large desalination plants — but the same sensors and IoT technology, scaled down and made affordable, can serve anyone who needs reliable water and energy monitoring." data-ar="مهمتنا الأساسية هي تحديث محطات التحلية الكبرى — لكن نفس الحساسات وتقنيات إنترنت الأشياء، بحجم أصغر وبتكلفة مناسبة، يمكنها أن تخدم أي شخص يحتاج إلى مراقبة موثوقة للمياه والطاقة.">
+          Our core mission is modernizing large desalination plants — but the same sensors and IoT technology, scaled down and made affordable, can serve anyone who needs reliable water and energy monitoring.
+        </p>
+        <div class="fe-tiers">
+          <div class="fe-tier">
+            <div class="fe-tier-icon">🏡</div>
+            <div class="fe-tier-text">
+              <strong data-en="Homes & Families" data-ar="المنازل والعائلات">Homes & Families</strong>
+              <span data-en="Affordable smart monitoring kits to track water and energy use, with remote control from your phone." data-ar="عُلب مراقبة ذكية بأسعار مناسبة لتتبع استهلاك المياه والطاقة، مع تحكم عن بعد من هاتفك.">Affordable smart monitoring kits to track water and energy use, with remote control from your phone.</span>
+            </div>
+          </div>
+          <div class="fe-tier">
+            <div class="fe-tier-icon">🌾</div>
+            <div class="fe-tier-text">
+              <strong data-en="Farmers & Small Growers" data-ar="الفلاحون وأصحاب المزارع الصغيرة">Farmers & Small Growers</strong>
+              <span data-en="Low-cost sensors for irrigation and water-resource management, built to run on solar power in remote areas." data-ar="حساسات منخفضة التكلفة لإدارة الري والموارد المائية، مصممة للعمل بالطاقة الشمسية في المناطق النائية.">Low-cost sensors for irrigation and water-resource management, built to run on solar power in remote areas.</span>
+            </div>
+          </div>
+          <div class="fe-tier">
+            <div class="fe-tier-icon">🔧</div>
+            <div class="fe-tier-text">
+              <strong data-en="Small Workshops & Micro-Businesses" data-ar="الورشات الصغيرة والأنشطة المصغّرة">Small Workshops & Micro-Businesses</strong>
+              <span data-en="Plug-and-play monitoring for small-scale equipment — no engineering team required." data-ar="مراقبة جاهزة للاستخدام للمعدات الصغيرة — دون الحاجة إلى فريق هندسي.">Plug-and-play monitoring for small-scale equipment — no engineering team required.</span>
+            </div>
+          </div>
+        </div>
+        <a href="https://wa.me/213658660553?text=Hi%20LBM%2C%20I%27d%20like%20to%20know%20more%20about%20your%20kits%20for%20homes%2Ffarms%2Fworkshops" target="_blank" rel="noopener" class="btn btn-outline" data-en="Ask About Our Kits on WhatsApp" data-ar="استفسر عن العُلب عبر واتساب">Ask About Our Kits on WhatsApp</a>
+      </div>
+      <div class="fe-visual">
+        <div class="fe-card-main">
+          <div class="fe-card-icons">
+            <span>🏭</span><span>→</span><span>🏡</span><span>🌾</span><span>🔧</span>
+          </div>
+          <p data-en="Real-time sensors, a simple mobile app, and optional solar power — the same building blocks behind our industrial systems, packaged into kits anyone can install and use." data-ar="حساسات تعمل في الوقت الحقيقي، تطبيق هاتف بسيط، وطاقة شمسية اختيارية — نفس المكونات الأساسية لأنظمتنا الصناعية، معبّأة في عُلب يمكن لأي شخص تركيبها واستخدامها.">
+            Real-time sensors, a simple mobile app, and optional solar power — the same building blocks behind our industrial systems, packaged into kits anyone can install and use.
+          </p>
+        </div>
+        <div class="fe-stats-row">
+          <div class="fe-stat">
+            <span>📡</span>
+            <small data-en="Real-Time Sensors" data-ar="حساسات لحظية">Real-Time Sensors</small>
+          </div>
+          <div class="fe-stat">
+            <span>📱</span>
+            <small data-en="Mobile App Control" data-ar="تحكم عبر الهاتف">Mobile App Control</small>
+          </div>
+          <div class="fe-stat">
+            <span>☀️</span>
+            <small data-en="Solar-Ready Everywhere" data-ar="جاهز بالطاقة الشمسية">Solar-Ready Everywhere</small>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ABOUT ->
+<section class="about" id="about">
+  <div class="container">
+    <div class="about-grid">
+      <div class="about-visual">
+        <div class="about-card-main">
+          <div class="about-icon-big">
+            <svg width="80" height="80" viewBox="0 0 80 80" fill="none">
+              <circle cx="40" cy="40" r="36" stroke="var(--cyan)" stroke-width="1.5" stroke-dasharray="8 4"/>
+              <path d="M40 15C40 15 24 27 24 42C24 50.8366 31.1634 58 40 58C48.8366 58 56 50.8366 56 42C56 27 40 15 40 15Z" stroke="var(--cyan)" stroke-width="2" fill="none"/>
+              <circle cx="40" cy="42" r="7" fill="var(--cyan)" opacity="0.15"/>
+              <circle cx="40" cy="42" r="3.5" fill="var(--cyan)"/>
+              <path d="M22 40H30M50 40H58M40 22V30M40 52V60" stroke="var(--cyan)" stroke-width="1.8" stroke-linecap="round"/>
+            </svg>
+          </div>
+          <p class="about-card-text" data-en="🇩🇿 Born in Algeria. Built for Africa." data-ar="🇩🇿 وُلد في الجزائر. بُني لأفريقيا.">🇩🇿 Born in Algeria. Built for Africa.</p>
+        </div>
+        <div class="about-stats-grid">
+          <div class="about-stat"><span>2025</span><small data-en="Year Founded" data-ar="سنة التأسيس">Year Founded</small></div>
+          <div class="about-stat about-stat-focus">
+            <span class="stat-flag">🇩🇿</span>
+            <small data-en="Current Focus · 2025–2026" data-ar="التركيز الحالي · 2025–2026">Current Focus · 2025–2026</small>
+          </div>
+          <div class="about-stat">
+            <span>3+</span>
+            <small data-en="Target Plants in Algeria" data-ar="محطات مستهدفة في الجزائر">Target Plants in Algeria</small>
+          </div>
+          <div class="about-stat about-stat-future">
+            <span class="stat-africa">🌍</span>
+            <small data-en="Africa · Coming Seasons" data-ar="أفريقيا · في المواسم القادمة">Africa · Coming Seasons</small>
+          </div>
+        </div>
+      </div>
+      <div class="about-content">
+        <span class="section-tag" data-en="Who We Are" data-ar="من نحن">Who We Are</span>
+        <h2 data-en="Algeria First — Africa Next" data-ar="الجزائر أولاً — أفريقيا تالياً">Algeria First — Africa Next</h2>
+        <p data-en="LBM was founded in 2025 in Sétif, Algeria. In our first season (2025–2026), our full focus is on Algeria: identifying target desalination plants, deploying our first IoT pilot, and proving our technology in the field." data-ar="تأسست LBM عام 2025 في سطيف، الجزائر. في موسمنا الأول (2025–2026) تركيزنا الكامل على الجزائر: تحديد محطات التحلية المستهدفة، ونشر أول مشروع IoT تجريبي، وإثبات تقنيتنا في الميدان.">
+          LBM was founded in 2025 in Sétif, Algeria. In our first season (2025–2026), our full focus is on Algeria: identifying target desalination plants, deploying our first IoT pilot, and proving our technology in the field.
+        </p>
+        <p data-en="The African expansion — North Africa then the whole continent — comes in the next seasons, once our Algerian foundation is solid. We believe in doing one thing right before scaling everywhere." data-ar="التوسع الأفريقي — شمال أفريقيا ثم القارة كلها — يأتي في المواسم القادمة، بعد أن يكون أساسنا الجزائري راسخاً. نؤمن بإتقان شيء واحد قبل التوسع في كل مكان.">
+          The African expansion — North Africa then the whole continent — comes in the next seasons, once our Algerian foundation is solid. We believe in doing one thing right before scaling everywhere.
+        </p>
+        <div class="about-features">
+          <div class="feature-item">
+            <div class="feature-check">✓</div>
+            <span data-en="100% Algerian founding team" data-ar="فريق تأسيسي جزائري 100%">100% Algerian founding team</span>
+          </div>
+          <div class="feature-item">
+            <div class="feature-check">✓</div>
+            <span data-en="Deep expertise in IoT & water systems" data-ar="خبرة عميقة في IoT وأنظمة المياه">Deep expertise in IoT & water systems</span>
+          </div>
+          <div class="feature-item">
+            <div class="feature-check">✓</div>
+            <span data-en="Industry 4.0 approach to water infrastructure" data-ar="نهج الصناعة 4.0 في البنية التحتية للمياه">Industry 4.0 approach to water infrastructure</span>
+          </div>
+          <div class="feature-item">
+            <div class="feature-check">✓</div>
+            <span data-en="Aligned with UN SDG 6 — Clean Water for All" data-ar="متوافقون مع هدف الأمم المتحدة SDG 6 — مياه نظيفة للجميع">Aligned with UN SDG 6 — Clean Water for All</span>
+          </div>
+        </div>
+        <a href="#contact" class="btn btn-primary" data-en="Partner With Us" data-ar="اشترك معنا">Partner With Us</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TEAM -->
+<section style="padding:5rem 0" id="team">
+  <div class="container">
+    <div class="section-header">
+      <span class="section-tag" data-en="The People Behind LBM" data-ar="الفريق خلف LBM">The People Behind LBM</span>
+      <h2 data-en="Our Founding Team" data-ar="فريقنا المؤسس">Our Founding Team</h2>
+      <p data-en="100% Algerian. Built in Sétif. Moving fast." data-ar="جزائريون 100%. بُني في سطيف. نتحرك بسرعة.">100% Algerian. Built in Sétif. Moving fast.</p>
+    </div>
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:1.5rem;max-width:900px;margin:0 auto">
+
+      <!-- Boukhalfa Zakaria -->
+      <div style="background:var(--blue-card);border:1px solid var(--border);border-radius:20px;padding:2rem;text-align:center;transition:all 0.3s" onmouseover="this.style.borderColor='rgba(0,212,255,0.4)';this.style.transform='translateY(-4px)'" onmouseout="this.style.borderColor='var(--border)';this.style.transform='none'">
+        <div style="width:72px;height:72px;border-radius:50%;background:linear-gradient(135deg,rgba(0,212,255,0.2),rgba(10,92,153,0.3));border:2px solid rgba(0,212,255,0.3);display:flex;align-items:center;justify-content:center;font-size:2rem;margin:0 auto 1.25rem">👨‍💻</div>
+        <h3 style="font-size:1.05rem;font-weight:800;margin-bottom:0.25rem">Boukhalfa Zakaria</h3>
+        <div style="font-size:0.72rem;font-weight:700;color:var(--cyan);font-family:'JetBrains Mono',monospace;letter-spacing:0.05em;margin-bottom:0.75rem" data-en="Founder & CEO" data-ar="المؤسس والمدير التنفيذي">Founder & CEO</div>
+        <div style="font-size:0.78rem;color:var(--text-muted);background:rgba(0,212,255,0.05);border:1px solid var(--border);border-radius:8px;padding:0.4rem 0.75rem;display:inline-block;font-family:'JetBrains Mono',monospace" data-en="Strategy · Business Development" data-ar="الاستراتيجية · تطوير الأعمال">Strategy · Business Development</div>
+      </div>
+
+      <!-- Meliani Mohamed Yasser -->
+      <div style="background:var(--blue-card);border:1px solid rgba(0,212,255,0.25);border-radius:20px;padding:2rem;text-align:center;transition:all 0.3s;background:linear-gradient(135deg,rgba(10,92,153,0.2),var(--blue-card))" onmouseover="this.style.borderColor='rgba(0,212,255,0.5)';this.style.transform='translateY(-4px)'" onmouseout="this.style.borderColor='rgba(0,212,255,0.25)';this.style.transform='none'">
+        <div style="width:72px;height:72px;border-radius:50%;background:linear-gradient(135deg,rgba(0,212,255,0.25),rgba(10,92,153,0.4));border:2px solid rgba(0,212,255,0.5);display:flex;align-items:center;justify-content:center;font-size:2rem;margin:0 auto 1.25rem">👨‍🔬</div>
+        <h3 style="font-size:1.05rem;font-weight:800;margin-bottom:0.25rem">Meliani Mohamed Yasser</h3>
+        <div style="font-size:0.72rem;font-weight:700;color:var(--cyan);font-family:'JetBrains Mono',monospace;letter-spacing:0.05em;margin-bottom:0.75rem" data-en="Co-Founder & CTO" data-ar="المؤسس المشارك والمدير التقني">Co-Founder & CTO</div>
+        <div style="font-size:0.78rem;color:var(--text-muted);background:rgba(0,212,255,0.05);border:1px solid var(--border);border-radius:8px;padding:0.4rem 0.75rem;display:inline-block;font-family:'JetBrains Mono',monospace" data-en="IoT · Software · AI" data-ar="IoT · برمجيات · ذكاء اصطناعي">IoT · Software · AI</div>
+      </div>
+
+      <!-- Laib Abdelmoumen -->
+      <div style="background:var(--blue-card);border:1px solid var(--border);border-radius:20px;padding:2rem;text-align:center;transition:all 0.3s" onmouseover="this.style.borderColor='rgba(0,212,255,0.4)';this.style.transform='translateY(-4px)'" onmouseout="this.style.borderColor='var(--border)';this.style.transform='none'">
+        <div style="width:72px;height:72px;border-radius:50%;background:linear-gradient(135deg,rgba(0,212,255,0.2),rgba(10,92,153,0.3));border:2px solid rgba(0,212,255,0.3);display:flex;align-items:center;justify-content:center;font-size:2rem;margin:0 auto 1.25rem">👷</div>
+        <h3 style="font-size:1.05rem;font-weight:800;margin-bottom:0.25rem">Laib Abdelmoumen</h3>
+        <div style="font-size:0.72rem;font-weight:700;color:var(--cyan);font-family:'JetBrains Mono',monospace;letter-spacing:0.05em;margin-bottom:0.75rem" data-en="Lead Engineer" data-ar="المهندس الرئيسي">Lead Engineer</div>
+        <div style="font-size:0.78rem;color:var(--text-muted);background:rgba(0,212,255,0.05);border:1px solid var(--border);border-radius:8px;padding:0.4rem 0.75rem;display:inline-block;font-family:'JetBrains Mono',monospace" data-en="Water Systems · Hardware" data-ar="أنظمة المياه · العتاد">Water Systems · Hardware</div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ROADMAP -->
+
+<section class="roadmap-section" id="roadmap">
+  <div class="container">
+    <div class="section-header">
+      <span class="section-tag" data-en="Our Journey" data-ar="مسيرتنا">Our Journey</span>
+      <h2 data-en="Technology Roadmap" data-ar="خارطة طريق التكنولوجيا">Technology Roadmap</h2>
+      <p data-en="From IoT foundation to full AI autonomy — here is where we are and where we are going." data-ar="من أساس IoT إلى الاستقلالية الكاملة بالذكاء الاصطناعي — ها هو موقفنا الحالي وإلى أين نتجه.">
+        From IoT foundation to full AI autonomy — here is where we are and where we are going.
+      </p>
+    </div>
+    <div class="roadmap-grid">
+
+      <div class="rm-card rm-done">
+        <div class="rm-phase" data-en="Season 1 · 2025–2026" data-ar="الموسم 1 · 2025–2026">Season 1 · 2025–2026</div>
+        <div class="rm-status rm-status-now" data-en="✦ Now · Algeria" data-ar="✦ الآن · الجزائر">✦ Now · Algeria</div>
+        <h3 data-en="Foundation" data-ar="الأساس">Foundation</h3>
+        <ul>
+          <li data-en="IoT sensor integration" data-ar="تكامل أجهزة الاستشعار IoT">IoT sensor integration</li>
+          <li data-en="Real-time monitoring dashboard" data-ar="لوحة المراقبة الفورية">Real-time monitoring dashboard</li>
+          <li data-en="Web & Android app" data-ar="تطبيق الويب والأندرويد">Web & Android app</li>
+          <li data-en="First pilot plant — Algeria" data-ar="أول محطة تجريبية — الجزائر">First pilot plant — Algeria</li>
+        </ul>
+      </div>
+
+      <div class="rm-card rm-next">
+        <div class="rm-phase" data-en="Season 2 · 2026–2027" data-ar="الموسم 2 · 2026–2027">Season 2 · 2026–2027</div>
+        <div class="rm-status rm-status-next" data-en="⟶ Next · North Africa" data-ar="⟶ التالي · شمال أفريقيا">⟶ Next · North Africa</div>
+        <h3 data-en="Intelligence" data-ar="الذكاء">Intelligence</h3>
+        <ul>
+          <li data-en="Predictive maintenance AI" data-ar="صيانة تنبؤية بالذكاء الاصطناعي">Predictive maintenance AI</li>
+          <li data-en="Anomaly detection models" data-ar="نماذج كشف الشذوذات">Anomaly detection models</li>
+          <li data-en="Energy optimization engine" data-ar="محرك تحسين الطاقة">Energy optimization engine</li>
+          <li data-en="Expand to North Africa" data-ar="التوسع في شمال أفريقيا">Expand to North Africa</li>
+        </ul>
+      </div>
+
+      <div class="rm-card rm-future">
+        <div class="rm-phase" data-en="Season 3 · 2027+" data-ar="الموسم 3 · 2027+">Season 3 · 2027+</div>
+        <div class="rm-status rm-status-future" data-en="◈ Future · All Africa + Global" data-ar="◈ المستقبل · كل أفريقيا + عالمياً">◈ Future · All Africa + Global</div>
+        <h3 data-en="Autonomy" data-ar="الاستقلالية">Autonomy</h3>
+        <ul>
+          <li data-en="Fully automated process control" data-ar="تحكم آلي كامل في العمليات">Fully automated process control</li>
+          <li data-en="Self-optimizing plant operations" data-ar="عمليات محطة تحسينية ذاتية">Self-optimizing plant operations</li>
+          <li data-en="Pan-African deployment" data-ar="نشر على نطاق أفريقيا كلها">Pan-African deployment</li>
+          <li data-en="Global market entry" data-ar="الدخول إلى السوق العالمية">Global market entry</li>
+        </ul>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section class="faq" id="faq">
+  <div class="container">
+    <div class="section-header">
+      <span class="section-tag" data-en="FAQ" data-ar="الأسئلة الشائعة">FAQ</span>
+      <h2 data-en="Frequently Asked Questions" data-ar="الأسئلة الأكثر شيوعاً">Frequently Asked Questions</h2>
+    </div>
+    <div class="faq-list">
+
+      <div class="faq-item">
+        <button class="faq-question" onclick="toggleFaq(this)">
+          <span data-en="What exactly does LBM do?" data-ar="ماذا تفعل LBM تحديداً؟">What exactly does LBM do?</span>
+          <span class="faq-icon">+</span>
+        </button>
+        <div class="faq-answer">
+          <p data-en="LBM is a technology startup — not a desalination company. We don't build new plants; we modernize existing ones. We install IoT sensor systems, connect them to our monitoring platform, and progressively add AI features like predictive maintenance and energy optimization. Think of us as the 'brain upgrade' for aging desalination infrastructure." data-ar="LBM ستارت آب تكنولوجي — وليست شركة تحلية مياه. نحن لا نبني محطات جديدة؛ بل نُحدِّث القائمة منها. نثبّت أنظمة استشعار IoT ونربطها بمنصة مراقبتنا ونضيف تدريجياً ميزات الذكاء الاصطناعي كالصيانة التنبؤية وتحسين الطاقة. فكر فينا بوصفنا 'ترقية الدماغ' للبنية التحتية المتقادمة لمحطات التحلية.">
+            LBM is a technology startup — not a desalination company. We don't build new plants; we modernize existing ones. We install IoT sensor systems, connect them to our monitoring platform, and progressively add AI features like predictive maintenance and energy optimization.
+          </p>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-question" onclick="toggleFaq(this)">
+          <span data-en="You're in Year 1 — is the technology ready?" data-ar="أنتم في السنة الأولى — هل التكنولوجيا جاهزة؟">You're in Year 1 — is the technology ready?</span>
+          <span class="faq-icon">+</span>
+        </button>
+        <div class="faq-answer">
+          <p data-en="Our core IoT platform and monitoring dashboard are operational — you can visit our live web app. We are currently in the pilot deployment phase, working with our first partner plant in Algeria. Predictive maintenance AI is in active development for 2026. We are transparent about where we are: early stage, but technically solid and moving fast." data-ar="منصة IoT الأساسية ولوحة المراقبة لدينا تعملان — يمكنك زيارة تطبيق الويب المباشر. نحن حالياً في مرحلة النشر التجريبي ونعمل مع أول محطة شريكة لنا في الجزائر. صيانة الذكاء الاصطناعي التنبؤية قيد التطوير النشط لعام 2026. نحن شفافون بشأن موقفنا: مرحلة مبكرة، لكن متينة تقنياً وتتقدم بسرعة.">
+            Our core IoT platform and monitoring dashboard are operational. We are currently in pilot deployment with our first partner plant in Algeria. Predictive maintenance AI is in active development for 2026. We are early stage, but technically solid and moving fast.
+          </p>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-question" onclick="toggleFaq(this)">
+          <span data-en="Why focus on North Africa first?" data-ar="لماذا التركيز على شمال أفريقيا أولاً؟">Why focus on North Africa first?</span>
+          <span class="faq-icon">+</span>
+        </button>
+        <div class="faq-answer">
+          <p data-en="North Africa has one of the highest concentrations of seawater desalination capacity in Africa, and much of that infrastructure is aging and unmonitored. Algeria alone has over 11 major desalination plants. We know this market, we understand its technical and regulatory landscape, and we are embedded in it. That proximity is our biggest competitive advantage." data-ar="شمال أفريقيا لديها واحدة من أعلى تركيزات طاقة تحلية مياه البحر في أفريقيا، وكثير من تلك البنية التحتية متقادمة وغير مراقبة. الجزائر وحدها لديها أكثر من 11 محطة تحلية كبرى. نعرف هذا السوق، ونفهم مشهده التقني والتنظيمي، ونحن منغمسون فيه. تلك القرب هي ميزتنا التنافسية الأكبر.">
+            North Africa has one of the highest concentrations of seawater desalination capacity in Africa, and much of that infrastructure is aging and unmonitored. Algeria alone has over 11 major desalination plants. We know this market and we are embedded in it — that proximity is our biggest competitive advantage.
+          </p>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-question" onclick="toggleFaq(this)">
+          <span data-en="What is predictive maintenance and why does it matter?" data-ar="ما هي الصيانة التنبؤية ولماذا تهم؟">What is predictive maintenance and why does it matter?</span>
+          <span class="faq-icon">+</span>
+        </button>
+        <div class="faq-answer">
+          <p data-en="Traditional maintenance is either reactive (fix it when it breaks) or scheduled (service it every X months). Predictive maintenance uses AI to analyze sensor data continuously — detecting subtle anomalies that signal an upcoming failure, days or weeks before it happens. For a desalination plant, an unplanned shutdown can mean thousands of people without water. Our AI prevents that." data-ar="الصيانة التقليدية إما تفاعلية (إصلاح ما ينكسر) أو مجدولة (صيانة كل X أشهر). تستخدم الصيانة التنبؤية الذكاء الاصطناعي لتحليل بيانات الاستشعار باستمرار — لاكتشاف الشذوذات الخفية التي تشير إلى عطل قادم، قبل أيام أو أسابيع من حدوثه. بالنسبة لمحطة تحلية، يمكن أن يعني التوقف غير المخطط آلاف الأشخاص بدون ماء. ذكاؤنا الاصطناعي يمنع ذلك.">
+            Traditional maintenance is either reactive or scheduled. Predictive maintenance uses AI to analyze sensor data and detect subtle anomalies that signal an upcoming failure — days or weeks before it happens. For a desalination plant, an unplanned shutdown can mean thousands of people without water. Our AI prevents that.
+          </p>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-question" onclick="toggleFaq(this)">
+          <span data-en="Are you open to partnerships or investors?" data-ar="هل أنتم منفتحون على الشراكات أو المستثمرين؟">Are you open to partnerships or investors?</span>
+          <span class="faq-icon">+</span>
+        </button>
+        <div class="faq-answer">
+          <p data-en="Absolutely. We are actively seeking pilot partnership agreements with desalination plant operators across Algeria and North Africa, as well as strategic investors who believe in the future of water tech in Africa. If you are a plant operator, water authority, technology partner, or investor — we want to hear from you." data-ar="بالتأكيد. نسعى بنشاط إلى اتفاقيات شراكة تجريبية مع مشغلي محطات التحلية في الجزائر وشمال أفريقيا، فضلاً عن المستثمرين الاستراتيجيين المؤمنين بمستقبل تكنولوجيا المياه في أفريقيا. إذا كنت مشغل محطة أو سلطة مياه أو شريكاً تقنياً أو مستثمراً — نريد سماعك.">
+            Absolutely. We are actively seeking pilot partnership agreements with desalination plant operators across Algeria and North Africa, as well as strategic investors who believe in the future of water tech in Africa. If you are a plant operator, water authority, or investor — we want to hear from you.
+          </p>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-question" onclick="toggleFaq(this)">
+          <span data-en="Can you retrofit our existing plant?" data-ar="هل يمكنكم تحديث محطتنا الحالية؟">Can you retrofit our existing plant?</span>
+          <span class="faq-icon">+</span>
+        </button>
+        <div class="faq-answer">
+          <p data-en="Yes — that is our core business. Our modular IoT systems are designed to integrate with any existing desalination plant regardless of manufacturer, age, or technology type (RO, MED, MSF). We conduct a site assessment first, then design a custom integration plan with minimal disruption to ongoing operations." data-ar="نعم — هذا هو عملنا الأساسي. أنظمة IoT المعيارية لدينا مصممة للتكامل مع أي محطة تحلية قائمة بغض النظر عن الشركة المصنعة أو العمر أو نوع التقنية (RO, MED, MSF). نجري أولاً تقييماً ميدانياً ثم نصمم خطة تكامل مخصصة مع الحد الأدنى من الاضطراب للعمليات الجارية.">
+            Yes — that is our core business. Our modular IoT systems are designed to integrate with any existing desalination plant regardless of manufacturer, age, or technology type (RO, MED, MSF). We start with a site assessment, then design a custom plan with minimal disruption.
+          </p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- HOW IT WORKS -->
+<section class="how-section" id="how">
+  <div class="container">
+    <div class="section-header">
+      <span class="section-tag" data-en="The Process" data-ar="العملية">The Process</span>
+      <h2 data-en="How It Works" data-ar="كيف نعمل">How It Works</h2>
+      <p data-en="Three clear steps — from your plant as it is today, to a fully smart, connected facility." data-ar="ثلاث خطوات واضحة — من محطتك كما هي اليوم، إلى منشأة ذكية ومتصلة بالكامل.">Three clear steps — from your plant as it is today, to a fully smart, connected facility.</p>
+    </div>
+    <div class="how-grid">
+      <div class="how-card">
+        <div class="how-number">01</div>
+        <div class="how-icon">
+          <svg width="32" height="32" viewBox="0 0 32 32" fill="none">
+            <circle cx="16" cy="16" r="12" stroke="currentColor" stroke-width="1.8"/>
+            <path d="M10 16C10 16 12 10 16 10C20 10 22 16 22 16C22 16 20 22 16 22C12 22 10 16 10 16Z" stroke="currentColor" stroke-width="1.8"/>
+            <circle cx="16" cy="16" r="3" fill="currentColor"/>
+          </svg>
+        </div>
+        <h3 data-en="Site Assessment" data-ar="التقييم الميداني">Site Assessment</h3>
+        <p data-en="Our engineers visit your plant, audit existing equipment, map sensor installation points, and deliver a full digitization plan tailored to your infrastructure." data-ar="يزور مهندسونا محطتك، ويراجعون المعدات القائمة، ويحددون نقاط تثبيت أجهزة الاستشعار، ويقدمون خطة رقمنة كاملة مصممة لبنيتك التحتية.">Our engineers visit your plant, audit existing equipment, map sensor points, and deliver a full digitization plan tailored to your infrastructure.</p>
+        <div class="how-duration"><span data-en="Duration: 1–3 days" data-ar="المدة: 1–3 أيام">Duration: 1–3 days</span></div>
+      </div>
+      <div class="how-arrow">→</div>
+      <div class="how-card">
+        <div class="how-number">02</div>
+        <div class="how-icon">
+          <svg width="32" height="32" viewBox="0 0 32 32" fill="none">
+            <rect x="4" y="4" width="8" height="8" rx="2" stroke="currentColor" stroke-width="1.8"/>
+            <rect x="20" y="4" width="8" height="8" rx="2" stroke="currentColor" stroke-width="1.8"/>
+            <rect x="4" y="20" width="8" height="8" rx="2" stroke="currentColor" stroke-width="1.8"/>
+            <rect x="20" y="20" width="8" height="8" rx="2" stroke="currentColor" stroke-width="1.8"/>
+            <path d="M12 8H20M8 12V20M24 12V20M12 24H20" stroke="currentColor" stroke-width="1.5"/>
+          </svg>
+        </div>
+        <h3 data-en="IoT Installation" data-ar="تثبيت أجهزة الاستشعار">IoT Installation</h3>
+        <p data-en="We install our modular sensor network and IoT edge devices directly onto your existing equipment — no replacement needed, minimal downtime, zero disruption to water production." data-ar="نثبّت شبكة الاستشعار المعيارية وأجهزة IoT الطرفية مباشرة على معداتك القائمة — دون استبدال، وتوقف ضئيل، وصفر اضطراب لإنتاج المياه.">We install our modular sensor network directly onto your existing equipment — no replacement needed, minimal downtime, zero disruption to production.</p>
+        <div class="how-duration"><span data-en="Duration: 1–2 weeks" data-ar="المدة: 1–2 أسبوع">Duration: 1–2 weeks</span></div>
+      </div>
+      <div class="how-arrow">→</div>
+      <div class="how-card">
+        <div class="how-number">03</div>
+        <div class="how-icon">
+          <svg width="32" height="32" viewBox="0 0 32 32" fill="none">
+            <rect x="3" y="5" width="26" height="18" rx="3" stroke="currentColor" stroke-width="1.8"/>
+            <path d="M10 29H22M16 23V29" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
+            <path d="M8 13L12 10L16 14L20 9L24 12" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
+          </svg>
+        </div>
+        <h3 data-en="Go Live & Monitor" data-ar="الإطلاق والمراقبة">Go Live & Monitor</h3>
+        <p data-en="Your plant goes live on the LBM dashboard. Real-time data, instant alerts, remote control — all accessible from any device. Our team provides full operator training and ongoing support." data-ar="تنطلق محطتك على لوحة LBM. بيانات فورية وتنبيهات فورية وتحكم عن بُعد — يمكن الوصول إليها من أي جهاز. يقدم فريقنا تدريباً كاملاً للمشغلين ودعماً مستمراً.">Your plant goes live on the LBM dashboard. Real-time data, instant alerts, remote control — from any device. Full operator training and ongoing support included.</p>
+        <div class="how-duration"><span data-en="Ongoing · 24/7 support" data-ar="مستمر · دعم على مدار الساعة">Ongoing · 24/7 support</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- LIVE DASHBOARD DEMO -->
+<section class="demo-section" id="demo">
+  <div class="container">
+    <div class="section-header">
+      <span class="section-tag" data-en="See It In Action" data-ar="شاهده في العمل">See It In Action</span>
+      <h2 data-en="Live Dashboard Preview" data-ar="معاينة لوحة التحكم الحية">Live Dashboard Preview</h2>
+      <p data-en="This is what your plant looks like after LBM integration — complete operational visibility at a glance." data-ar="هكذا تبدو محطتك بعد تكامل LBM — رؤية تشغيلية كاملة دفعة واحدة.">This is what your plant looks like after LBM integration — complete operational visibility at a glance.</p>
+    </div>
+    <div class="demo-frame">
+      <div class="demo-topbar">
+        <div class="demo-dots"><span></span><span></span><span></span></div>
+        <div class="demo-url">🔒 lbm-monitor.app · <span style="color:#22c55e" data-en="Live" data-ar="مباشر">Live</span></div>
+        <div class="demo-time" id="demoTime">--:--:--</div>
+      </div>
+      <div class="demo-body">
+        <div class="demo-sidebar">
+          <div class="demo-nav-item active">📊 <span data-en="Overview" data-ar="نظرة عامة">Overview</span></div>
+          <div class="demo-nav-item">💧 <span data-en="Water Quality" data-ar="جودة المياه">Water Quality</span></div>
+          <div class="demo-nav-item">⚡ <span data-en="Energy" data-ar="الطاقة">Energy</span></div>
+          <div class="demo-nav-item">🔔 <span data-en="Alerts" data-ar="التنبيهات">Alerts</span></div>
+          <div class="demo-nav-item">🔧 <span data-en="Maintenance" data-ar="الصيانة">Maintenance</span></div>
+        </div>
+        <div class="demo-main">
+          <div class="demo-kpi-row">
+            <div class="demo-kpi green">
+              <div class="demo-kpi-val" id="kpiSalinity">1.2</div>
+              <div class="demo-kpi-label" data-en="Salinity (ppt)" data-ar="الملوحة">Salinity (ppt)</div>
+              <div class="demo-kpi-status" data-en="✓ Normal" data-ar="✓ طبيعي">✓ Normal</div>
+            </div>
+            <div class="demo-kpi blue">
+              <div class="demo-kpi-val" id="kpiFlow">78.4</div>
+              <div class="demo-kpi-label" data-en="Flow (m³/h)" data-ar="التدفق">Flow (m³/h)</div>
+              <div class="demo-kpi-status" data-en="✓ Optimal" data-ar="✓ مثالي">✓ Optimal</div>
+            </div>
+            <div class="demo-kpi teal">
+              <div class="demo-kpi-val" id="kpiPH">7.2</div>
+              <div class="demo-kpi-label" data-en="pH Level" data-ar="درجة الحموضة">pH Level</div>
+              <div class="demo-kpi-status" data-en="✓ Normal" data-ar="✓ طبيعي">✓ Normal</div>
+            </div>
+            <div class="demo-kpi orange">
+              <div class="demo-kpi-val" id="kpiEnergy">142</div>
+              <div class="demo-kpi-label" data-en="Energy (kWh)" data-ar="الطاقة">Energy (kWh)</div>
+              <div class="demo-kpi-status" data-en="↓ -8% vs avg" data-ar="↓ -8% عن المتوسط">↓ -8% vs avg</div>
+            </div>
+          </div>
+          <div class="demo-chart-row">
+            <div class="demo-chart-box">
+              <div class="demo-chart-title" data-en="Production — Last 6 Hours" data-ar="الإنتاج — آخر 6 ساعات">Production — Last 6 Hours</div>
+              <div class="demo-chart">
+                <div class="demo-bar-group">
+                  <div class="demo-bar" style="height:60%"></div>
+                  <div class="demo-bar" style="height:75%"></div>
+                  <div class="demo-bar" style="height:68%"></div>
+                  <div class="demo-bar" style="height:82%"></div>
+                  <div class="demo-bar" style="height:79%"></div>
+                  <div class="demo-bar active" style="height:88%"></div>
+                </div>
+                <div class="demo-chart-labels">
+                  <span>06h</span><span>08h</span><span>10h</span><span>12h</span><span>14h</span><span data-en="Now" data-ar="الآن">Now</span>
+                </div>
+              </div>
+            </div>
+            <div class="demo-alerts-box">
+              <div class="demo-chart-title" data-en="System Status" data-ar="حالة النظام">System Status</div>
+              <div class="demo-alert-item ok"><span class="demo-dot green-dot"></span><span data-en="RO Membranes — OK" data-ar="أغشية التناضح — سليمة">RO Membranes — OK</span></div>
+              <div class="demo-alert-item ok"><span class="demo-dot green-dot"></span><span data-en="High-Pressure Pumps — OK" data-ar="مضخات الضغط العالي — سليمة">High-Pressure Pumps — OK</span></div>
+              <div class="demo-alert-item ok"><span class="demo-dot green-dot"></span><span data-en="Chemical Dosing — OK" data-ar="جرعات الكيماويات — سليمة">Chemical Dosing — OK</span></div>
+              <div class="demo-alert-item warn"><span class="demo-dot yellow-dot"></span><span data-en="Pre-filter P3 — Monitor" data-ar="الفلتر المسبق P3 — مراقبة">Pre-filter P3 — Monitor</span></div>
+              <div class="demo-alert-item ok"><span class="demo-dot green-dot"></span><span data-en="Energy Recovery — OK" data-ar="استعادة الطاقة — سليمة">Energy Recovery — OK</span></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div style="text-align:center;margin-top:2rem">
+      <a href="https://web-lilac-three-49.vercel.app" target="_blank" class="btn btn-primary" data-en="Open Full Web App →" data-ar="افتح التطبيق الكامل →">Open Full Web App →</a>
+    </div>
+  </div>
+</section>
+
+<!-- PARTNERS / SUPPORTED BY -->
+<section class="partners-section" id="partners">
+  <div class="container">
+    <div class="section-header">
+      <span class="section-tag" data-en="Ecosystem" data-ar="النظام البيئي">Ecosystem</span>
+      <h2 data-en="Partners & Supported By" data-ar="الشركاء والداعمون">Partners & Supported By</h2>
+      <p data-en="We are building our network of institutional, academic, and industry partners across Algeria and North Africa." data-ar="نبني شبكتنا من الشركاء المؤسسيين والأكاديميين والصناعيين في الجزائر وشمال أفريقيا.">We are building our network of institutional, academic, and industry partners across Algeria and North Africa.</p>
+    </div>
+    <div class="partners-grid">
+      <div class="partner-slot filled">
+        <div class="partner-logo-placeholder">🏛️</div>
+        <span data-en="Algerian Water Authority" data-ar="سلطة المياه الجزائرية">Algerian Water Authority</span>
+        <small data-en="Target Partner" data-ar="شريك مستهدف">Target Partner</small>
+      </div>
+      <div class="partner-slot filled">
+        <div class="partner-logo-placeholder">🎓</div>
+        <span data-en="Ferhat Abbas University" data-ar="جامعة فرحات عباس">Ferhat Abbas University</span>
+        <small data-en="R&D Collaboration" data-ar="تعاون بحث وتطوير">R&D Collaboration</small>
+      </div>
+      <div class="partner-slot filled">
+        <div class="partner-logo-placeholder">💧</div>
+        <span data-en="ADE / Algerian Water" data-ar="الجزائرية للمياه">ADE / Algerian Water</span>
+        <small data-en="Target Partner" data-ar="شريك مستهدف">Target Partner</small>
+      </div>
+      <div class="partner-slot open">
+        <div class="partner-plus">+</div>
+        <span data-en="Your Organization" data-ar="مؤسستك">Your Organization</span>
+        <small data-en="Open Slot — Contact Us" data-ar="موقع مفتوح — تواصل معنا">Open Slot — Contact Us</small>
+      </div>
+      <div class="partner-slot open">
+        <div class="partner-plus">+</div>
+        <span data-en="Investor / VC" data-ar="مستثمر">Investor / VC</span>
+        <small data-en="Open Slot" data-ar="موقع مفتوح">Open Slot</small>
+      </div>
+      <div class="partner-slot open">
+        <div class="partner-plus">+</div>
+        <span data-en="Tech Partner" data-ar="شريك تقني">Tech Partner</span>
+        <small data-en="Open Slot" data-ar="موقع مفتوح">Open Slot</small>
+      </div>
+    </div>
+    <div style="text-align:center;margin-top:2rem">
+      <a href="#contact" class="btn btn-outline" data-en="Become a Partner" data-ar="كن شريكاً">Become a Partner</a>
+    </div>
+  </div>
+</section>
+
+<!-- TESTIMONIALS -->
+<section class="testimonials-section" id="testimonials">
+  <div class="container">
+    <div class="section-header">
+      <span class="section-tag" data-en="Voices" data-ar="آراء">Voices</span>
+      <h2 data-en="What People Are Saying" data-ar="ما يقوله الناس">What People Are Saying</h2>
+    </div>
+    <div class="testimonials-grid">
+      <div class="testi-card">
+        <div class="testi-quote">"</div>
+        <p data-en="The water crisis in Algeria needs exactly this kind of innovation — local engineers who understand our infrastructure and can modernize it without starting from scratch." data-ar="أزمة المياه في الجزائر تحتاج تحديداً هذا النوع من الابتكار — مهندسون محليون يفهمون بنيتنا التحتية ويمكنهم تحديثها دون البدء من الصفر.">The water crisis in Algeria needs exactly this kind of innovation — local engineers who understand our infrastructure and can modernize it without starting from scratch.</p>
+        <div class="testi-author">
+          <div class="testi-avatar">👷</div>
+          <div>
+            <strong data-en="Water Infrastructure Engineer" data-ar="مهندس بنية تحتية للمياه">Water Infrastructure Engineer</strong>
+            <small data-en="Algiers, Algeria" data-ar="الجزائر العاصمة">Algiers, Algeria</small>
+          </div>
+        </div>
+      </div>
+      <div class="testi-card featured-testi">
+        <div class="testi-quote">"</div>
+        <p data-en="Desalination plants in North Africa are running blind — no real-time data, no predictive tools. LBM is solving the most critical gap in our water security infrastructure." data-ar="محطات التحلية في شمال أفريقيا تعمل بشكل أعمى — لا بيانات فورية، لا أدوات تنبؤية. LBM تحل أهم فجوة في بنية أمننا المائي.">Desalination plants in North Africa are running blind — no real-time data, no predictive tools. LBM is solving the most critical gap in our water security infrastructure.</p>
+        <div class="testi-author">
+          <div class="testi-avatar">🎓</div>
+          <div>
+            <strong data-en="Prof. Water Resources, Sétif University" data-ar="أستاذ الموارد المائية، جامعة سطيف">Prof. Water Resources, Sétif University</strong>
+            <small data-en="Academic Advisor" data-ar="مستشار أكاديمي">Academic Advisor</small>
+          </div>
+        </div>
+      </div>
+      <div class="testi-card">
+        <div class="testi-quote">"</div>
+        <p data-en="IoT and AI-driven maintenance in desalination is still rare in Africa. A startup that starts locally and understands the terrain is exactly what this sector needs." data-ar="الصيانة القائمة على IoT والذكاء الاصطناعي في التحلية لا تزال نادرة في أفريقيا. ستارت آب يبدأ محلياً ويفهم التضاريس هو تحديداً ما يحتاجه هذا القطاع.">IoT and AI-driven maintenance in desalination is still rare in Africa. A startup that starts locally and understands the terrain is exactly what this sector needs.</p>
+        <div class="testi-author">
+          <div class="testi-avatar">💼</div>
+          <div>
+            <strong data-en="Clean-Tech Investor" data-ar="مستثمر في التقنيات النظيفة">Clean-Tech Investor</strong>
+            <small data-en="North Africa Focus" data-ar="تركيز على شمال أفريقيا">North Africa Focus</small>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- BLOG / NEWS -->
+<section class="blog-section" id="blog">
+  <div class="container">
+    <div class="section-header">
+      <span class="section-tag" data-en="Knowledge" data-ar="المعرفة">Knowledge</span>
+      <h2 data-en="Latest Insights" data-ar="أحدث المقالات">Latest Insights</h2>
+      <p data-en="Thoughts on water technology, IoT, and the future of desalination in Africa." data-ar="أفكار حول تكنولوجيا المياه وإنترنت الأشياء ومستقبل التحلية في أفريقيا.">Thoughts on water technology, IoT, and the future of desalination in Africa.</p>
+    </div>
+    <div class="blog-grid">
+      <div class="blog-card featured-blog">
+        <div class="blog-category" data-en="Deep Dive" data-ar="تحليل معمق">Deep Dive</div>
+        <h3 data-en="Why Algeria's Desalination Plants Need Urgent Digitization" data-ar="لماذا تحتاج محطات التحلية في الجزائر إلى رقمنة عاجلة">Why Algeria's Desalination Plants Need Urgent Digitization</h3>
+        <p data-en="Algeria operates over 11 major seawater desalination plants — yet most run without real-time monitoring, predictive tools, or connected infrastructure. Here's what that costs." data-ar="تشغّل الجزائر أكثر من 11 محطة تحلية بحرية كبرى — لكن معظمها يعمل دون مراقبة فورية أو أدوات تنبؤية أو بنية تحتية متصلة. إليك ما يكلفه ذلك.">Algeria operates over 11 major seawater desalination plants — yet most run without real-time monitoring or predictive tools. Here's what that costs.</p>
+        <div class="blog-meta">
+          <span data-en="LBM Team · June 2025" data-ar="فريق LBM · يونيو 2025">LBM Team · June 2025</span>
+          <a href="#contact" class="blog-read" data-en="Read More →" data-ar="اقرأ أكثر →">Read More →</a>
+        </div>
+      </div>
+      <div class="blog-card">
+        <div class="blog-category" data-en="Technology" data-ar="التكنولوجيا">Technology</div>
+        <h3 data-en="Predictive Maintenance 101: How AI Prevents Plant Shutdowns" data-ar="الصيانة التنبؤية 101: كيف يمنع الذكاء الاصطناعي إيقاف تشغيل المحطات">Predictive Maintenance 101: How AI Prevents Plant Shutdowns</h3>
+        <p data-en="The difference between reactive, preventive, and predictive maintenance — and why the third approach is transforming water infrastructure globally." data-ar="الفرق بين الصيانة التفاعلية والوقائية والتنبؤية — ولماذا يحول النهج الثالث البنية التحتية للمياه عالمياً.">The difference between reactive, preventive, and predictive maintenance — and why it's transforming water infrastructure globally.</p>
+        <div class="blog-meta">
+          <span data-en="LBM Tech · May 2025" data-ar="LBM تقني · مايو 2025">LBM Tech · May 2025</span>
+          <a href="#contact" class="blog-read" data-en="Read More →" data-ar="اقرأ أكثر →">Read More →</a>
+        </div>
+      </div>
+      <div class="blog-card">
+        <div class="blog-category" data-en="Market" data-ar="السوق">Market</div>
+        <h3 data-en="The $12B African Water Tech Opportunity" data-ar="فرصة تكنولوجيا المياه الأفريقية بـ 12 مليار دولار">The $12B African Water Tech Opportunity</h3>
+        <p data-en="Africa's water infrastructure gap is massive — and the technology solutions needed to close it represent one of the continent's biggest investment opportunities this decade." data-ar="فجوة البنية التحتية للمياه في أفريقيا ضخمة — والحلول التقنية اللازمة لسدها تمثل إحدى أكبر فرص الاستثمار في القارة هذا العقد.">Africa's water infrastructure gap represents one of the continent's biggest investment opportunities this decade.</p>
+        <div class="blog-meta">
+          <span data-en="LBM Research · April 2025" data-ar="LBM بحوث · أبريل 2025">LBM Research · April 2025</span>
+          <a href="#contact" class="blog-read" data-en="Read More →" data-ar="اقرأ أكثر →">Read More →</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- NEWSLETTER -->
+    <div class="newsletter-box">
+      <div class="newsletter-inner">
+        <div class="newsletter-text">
+          <h3 data-en="Stay in the Loop" data-ar="ابق على اطلاع">Stay in the Loop</h3>
+          <p data-en="Get our latest insights on water tech, IoT, and LBM updates — directly in your inbox." data-ar="احصل على آخر رؤانا حول تقنية المياه وIoT وأخبار LBM — مباشرة في بريدك الإلكتروني.">Get our latest insights on water tech, IoT, and LBM updates — directly in your inbox.</p>
+        </div>
+        <div class="newsletter-form">
+          <input type="email" id="nlEmail" placeholder="your@email.com" data-ph-en="your@email.com" data-ph-ar="بريدك@الإلكتروني.com">
+          <button onclick="subscribeNewsletter()" class="btn btn-primary" data-en="Subscribe" data-ar="اشترك">Subscribe</button>
+        </div>
+        <div id="nlSuccess" style="display:none;color:#22c55e;font-size:0.85rem;margin-top:0.5rem" data-en="✓ Subscribed! Welcome to the LBM community." data-ar="✓ تم الاشتراك! أهلاً بك في مجتمع LBM.">✓ Subscribed! Welcome to the LBM community.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section class="contact" id="contact">
+  <div class="container">
+    <div class="section-header">
+      <span class="section-tag" data-en="Get In Touch" data-ar="تواصل معنا">Get In Touch</span>
+      <h2 data-en="Let's Build Something Together" data-ar="لنبني شيئاً معاً">Let's Build Something Together</h2>
+      <p data-en="Whether you are a plant operator, water authority, investor, or tech partner — we want to connect." data-ar="سواء كنت مشغل محطة أو سلطة مياه أو مستثمراً أو شريكاً تقنياً — نريد التواصل.">Whether you are a plant operator, water authority, investor, or tech partner — we want to connect.</p>
+    </div>
+    <div class="contact-grid">
+      <div class="contact-info">
+        <div class="contact-item">
+          <div class="contact-icon">
+            <svg width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M3 5C3 4.44772 3.44772 4 4 4H16C16.5523 4 17 4.44772 17 5V15C17 15.5523 16.5523 16 16 16H4C3.44772 16 3 15.5523 3 15V5Z" stroke="currentColor" stroke-width="1.5"/><path d="M3 5L10 11L17 5" stroke="currentColor" stroke-width="1.5"/></svg>
+          </div>
+          <div>
+            <span class="contact-label" data-en="Email" data-ar="البريد الإلكتروني">Email</span>
+            <a href="mailto:lbmtech000@gmail.com">lbmtech000@gmail.com</a>
+          </div>
+        </div>
+        <div class="contact-item">
+          <div class="contact-icon">
+            <svg width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M4 4C4 4 5 4 6 6C7 8 6.5 9 5.5 9.5C6.5 11.5 8.5 13.5 10.5 14.5C11 13.5 12 13 14 14C16 15 16 16 16 16C16 16 16 17 14 17C8.5 17 3 11.5 3 6C3 4 4 4 4 4Z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+          </div>
+          <div>
+            <span class="contact-label" data-en="Phone" data-ar="الهاتف">Phone</span>
+            <a href="tel:+213658660553" dir="ltr">+213 658 660 553</a>
+          </div>
+        </div>
+        <div class="contact-item">
+          <div class="contact-icon">
+            <svg width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M10 11C11.6569 11 13 9.65685 13 8C13 6.34315 11.6569 5 10 5C8.34315 5 7 6.34315 7 8C7 9.65685 8.34315 11 10 11Z" stroke="currentColor" stroke-width="1.5"/><path d="M10 2C7.23858 2 5 4.23858 5 7C5 11.4183 10 18 10 18C10 18 15 11.4183 15 7C15 4.23858 12.7614 2 10 2Z" stroke="currentColor" stroke-width="1.5"/></svg>
+          </div>
+          <div>
+            <span class="contact-label" data-en="HQ" data-ar="المقر الرئيسي">HQ</span>
+            <span data-en="Sétif, Algeria 🇩🇿" data-ar="سطيف، الجزائر 🇩🇿">Sétif, Algeria 🇩🇿</span>
+          </div>
+        </div>
+        <div class="contact-item">
+          <div class="contact-icon">
+            <svg width="20" height="20" viewBox="0 0 20 20" fill="none"><circle cx="10" cy="10" r="7" stroke="currentColor" stroke-width="1.5"/><path d="M10 6V10L13 12" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+          </div>
+          <div>
+            <span class="contact-label" data-en="Stage" data-ar="المرحلة">Stage</span>
+            <span data-en="Early Stage · Year 1 · Open to Pilots & Investors" data-ar="مرحلة مبكرة · السنة الأولى · منفتحون على التجارب والمستثمرين">Early Stage · Year 1 · Open to Pilots & Investors</span>
+          </div>
+        </div>
+        <div class="contact-social-row">
+          <img src="logo_lbm.png" alt="LBM" class="spinning-logo-img">
+          <div class="contact-social">
+            <a href="https://www.linkedin.com/in/lbm-tech-a13654414/" target="_blank" rel="noopener" class="social-link" aria-label="LinkedIn">in</a>
+            <a href="https://www.instagram.com/lbm_tech_/" target="_blank" rel="noopener" class="social-link" aria-label="Instagram">📷</a>
+            <a href="https://www.facebook.com/profile.php?id=61590783116921" target="_blank" rel="noopener" class="social-link" aria-label="Facebook">f</a>
+            <a href="https://www.youtube.com/@LBM-Tech-000" target="_blank" rel="noopener" class="social-link" aria-label="YouTube">▶</a>
+            <a href="https://wa.me/213658660553" target="_blank" rel="noopener" class="social-link" aria-label="WhatsApp">📱</a>
+          </div>
+        </div>
+      </div>
+      <form class="contact-form" id="contactForm" onsubmit="submitForm(event)">
+        <!-- Formspree endpoint — replace xyzabcde with your real Formspree form ID from formspree.io -->
+        <input type="hidden" name="_replyto" value="">
+        <input type="hidden" name="_subject" value="New LBM Website Message">
+        <div class="form-row">
+          <div class="form-group">
+            <label data-en="Full Name" data-ar="الاسم الكامل">Full Name</label>
+            <input type="text" name="name" id="fieldName" required placeholder="Your name" data-ph-en="Your name" data-ph-ar="اسمك الكامل">
+          </div>
+          <div class="form-group">
+            <label data-en="Organization" data-ar="المؤسسة">Organization</label>
+            <input type="text" name="organization" id="fieldOrg" placeholder="Company / Authority" data-ph-en="Company / Authority" data-ph-ar="الشركة / السلطة">
+          </div>
+        </div>
+        <div class="form-group">
+          <label data-en="Email" data-ar="البريد الإلكتروني">Email</label>
+          <input type="email" name="email" id="fieldEmail" required placeholder="you@organization.com" data-ph-en="you@organization.com" data-ph-ar="you@organization.com">
+        </div>
+        <div class="form-group">
+          <label data-en="I am a…" data-ar="أنا…">I am a…</label>
+          <select name="type" id="fieldType">
+            <option data-en="Desalination Plant Operator" data-ar="مشغّل محطة تحلية">Desalination Plant Operator</option>
+            <option data-en="Customer / Buyer" data-ar="زبون / مشتري">Customer / Buyer</option>
+            <option data-en="Water Authority / Government" data-ar="سلطة مياه / حكومة">Water Authority / Government</option>
+            <option data-en="Investor / VC" data-ar="مستثمر">Investor / VC</option>
+            <option data-en="Technology Partner" data-ar="شريك تقني">Technology Partner</option>
+            <option data-en="Researcher / Academic" data-ar="باحث / أكاديمي">Researcher / Academic</option>
+            <option data-en="Other" data-ar="أخرى">Other</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label data-en="Message" data-ar="الرسالة">Message</label>
+          <textarea rows="4" name="message" id="fieldMsg" required placeholder="Tell us about your plant, project, or interest..." data-ph-en="Tell us about your plant, project, or interest..." data-ph-ar="أخبرنا عن محطتك أو مشروعك أو اهتمامك..."></textarea>
+        </div>
+        <button type="submit" class="btn btn-primary btn-full" id="submitBtn" data-en="Send Message" data-ar="إرسال الرسالة">Send Message</button>
+        <div id="formSuccess" class="form-success" style="display:none">
+          <span data-en="✓ Message sent! We'll be in touch within 48 hours." data-ar="✓ تم الإرسال! سنتواصل معك خلال 48 ساعة.">✓ Message sent! We'll be in touch within 48 hours.</span>
+        </div>
+        <div id="formError" style="display:none;color:#ef4444;font-size:0.85rem;margin-top:0.75rem;text-align:center">
+          <span data-en="⚠ Failed to send. Please email us directly at lbmtech000@gmail.com" data-ar="⚠ فشل الإرسال. راسلنا مباشرة على lbmtech000@gmail.com">⚠ Failed to send. Please email us directly at lbmtech000@gmail.com</span>
+        </div>
+      </form>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a href="#home" class="nav-logo" style="margin-bottom:1rem;display:flex">
+          <img src="logo_lbm.png" alt="LBM Logo" class="nav-logo-img">
+        </a>
+        <p data-en="Algerian deep-tech startup modernizing seawater desalination infrastructure across North Africa and beyond — with IoT, AI, and predictive maintenance technology." data-ar="ستارت آب جزائري عميق التقنية يحدِّث البنية التحتية لمحطات تحلية مياه البحر في شمال أفريقيا وما وراءها — بتقنيات IoT والذكاء الاصطناعي والصيانة التنبؤية.">
+          Algerian deep-tech startup modernizing seawater desalination across North Africa — with IoT, AI, and predictive maintenance.
+        </p>
+        <div style="margin-top:1rem;font-size:0.78rem;color:var(--text-muted);font-family:'JetBrains Mono',monospace">
+          🇩🇿 Sétif, Algeria · lbmtech000@gmail.com · +213 658 660 553
+        </div>
+        <div class="contact-social" style="margin-top:1.25rem">
+          <a href="https://www.linkedin.com/in/lbm-tech-a13654414/" target="_blank" rel="noopener" class="social-link" aria-label="LinkedIn">in</a>
+          <a href="https://www.instagram.com/lbm_tech_/" target="_blank" rel="noopener" class="social-link" aria-label="Instagram">📷</a>
+          <a href="https://www.facebook.com/profile.php?id=61590783116921" target="_blank" rel="noopener" class="social-link" aria-label="Facebook">f</a>
+          <a href="https://www.youtube.com/@LBM-Tech-000" target="_blank" rel="noopener" class="social-link" aria-label="YouTube">▶</a>
+          <a href="https://wa.me/213658660553" target="_blank" rel="noopener" class="social-link" aria-label="WhatsApp">📱</a>
+        </div>
+      </div>
+      <div class="footer-links">
+        <h4 data-en="Company" data-ar="الشركة">Company</h4>
+        <a href="index.html#about"   data-en="About Us"    data-ar="عنّا">About Us</a>
+        <a href="index.html#vision"  data-en="Our Vision"  data-ar="رؤيتنا">Our Vision</a>
+        <a href="index.html#roadmap" data-en="Roadmap"     data-ar="خارطة الطريق">Roadmap</a>
+        <a href="index.html#contact" data-en="Contact"     data-ar="تواصل معنا">Contact</a>
+      </div>
+      <div class="footer-links">
+        <h4 data-en="Solutions" data-ar="الحلول">Solutions</h4>
+        <a href="index.html#services" data-en="IoT Integration"        data-ar="تكامل IoT">IoT Integration</a>
+        <a href="index.html#services" data-en="Remote Monitoring"      data-ar="مراقبة عن بُعد">Remote Monitoring</a>
+        <a href="index.html#services" data-en="Predictive Maintenance" data-ar="صيانة تنبؤية">Predictive Maintenance</a>
+        <a href="index.html#services" data-en="Consulting"             data-ar="استشارات">Consulting</a>
+      </div>
+      <div class="footer-links">
+        <h4 data-en="Resources" data-ar="الموارد">Resources</h4>
+        <a href="downloads.html"   data-en="Apps & Downloads"  data-ar="التطبيقات">Apps & Downloads</a>
+        <a href="pitch.html"       data-en="Investor Pitch 📊" data-ar="ملف المستثمرين 📊" onclick="return checkPitchAccess(event)">Investor Pitch 📊</a>
+        <a href="index.html#faq"   data-en="FAQ"               data-ar="الأسئلة الشائعة">FAQ</a>
+        <a href="index.html#blog"  data-en="Blog"              data-ar="المدونة">Blog</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span data-en="© 2025 LBM Technology. All rights reserved." data-ar="© 2025 LBM للتكنولوجيا. جميع الحقوق محفوظة.">© 2025 LBM Technology. All rights reserved.</span>
+      <span data-en="Made with 🤍 in Algeria 🇩🇿" data-ar="صُنع بـ 🤍 في الجزائر 🇩🇿">Made with 🤍 in Algeria 🇩🇿</span>
+    </div>
+  </div>
+</footer>
+
+<!-- WHATSAPP BUTTON -->
+<a href="https://wa.me/213658660553" target="_blank" rel="noopener" class="whatsapp-btn" id="whatsappBtn" aria-label="Chat on WhatsApp">
+  <svg width="26" height="26" viewBox="0 0 24 24" fill="currentColor">
+    <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/>
+    <path d="M12 0C5.373 0 0 5.373 0 12c0 2.136.564 4.14 1.545 5.876L.057 23.243a.75.75 0 00.916.916l5.368-1.488A11.953 11.953 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.75a9.714 9.714 0 01-4.95-1.355l-.355-.21-3.687 1.022 1.022-3.687-.21-.355A9.714 9.714 0 012.25 12C2.25 6.615 6.615 2.25 12 2.25S21.75 6.615 21.75 12 17.385 21.75 12 21.75z"/>
+  </svg>
+</a>
+
+<!-- CHATBOT -->
+<div class="chatbot-bubble" id="chatbubble" onclick="toggleChat()">
+  <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+    <path d="M21 15C21 15.5304 20.7893 16.0391 20.4142 16.4142C20.0391 16.7893 19.5304 17 19 17H7L3 21V5C3 4.46957 3.21071 3.96086 3.58579 3.58579C3.96086 3.21071 4.46957 3 5 3H19C19.5304 3 20.0391 3.21071 20.4142 3.58579C20.7893 3.96086 21 4.46957 21 5V15Z" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+  </svg>
+  <span class="chat-notification">1</span>
+</div>
+
+<div class="chatbot-window" id="chatwindow">
+  <div class="chat-header">
+    <div class="chat-avatar">
+      <img src="logo_lbm.png" alt="LBM" style="width:32px;height:32px;border-radius:8px;object-fit:cover">
+    </div>
+    <div>
+      <strong>LBM Assistant</strong>
+      <small data-en="Online · Smart Support" data-ar="متصل · دعم ذكي">Online · Smart Support</small>
+    </div>
+    <button class="chat-close" onclick="toggleChat()">✕</button>
+  </div>
+  <div class="chat-messages" id="chatMessages">
+    <div class="chat-msg bot">
+      <p data-en="👋 Hello! I'm LBM's assistant. We're an Algerian startup modernizing desalination plants with IoT & AI. How can I help you today?" data-ar="👋 مرحباً! أنا مساعد LBM. نحن ستارت آب جزائري يُحدِّث محطات التحلية بـ IoT والذكاء الاصطناعي. كيف يمكنني مساعدتك اليوم؟">
+        👋 Hello! I'm LBM's assistant. We're an Algerian startup modernizing desalination plants with IoT & AI. How can I help you today?
+      </p>
+    </div>
+    <div class="chat-quick-btns" id="quickBtns">
+      <button onclick="quickMsg('What stage is LBM at?')"         data-en="Our Stage"    data-ar="مرحلتنا">Our Stage</button>
+      <button onclick="quickMsg('What services do you offer?')"   data-en="Services"     data-ar="الخدمات">Services</button>
+      <button onclick="quickMsg('I want to partner with LBM')"    data-en="Partner / Invest" data-ar="شراكة / استثمار">Partner / Invest</button>
+    </div>
+  </div>
+  <div class="chat-input-area">
+    <input type="text" id="chatInput" placeholder="Type your message..." onkeypress="if(event.key==='Enter')sendChat()" data-ph-en="Type your message..." data-ph-ar="اكتب رسالتك...">
+    <button onclick="sendChat()" class="chat-send">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M22 2L11 13M22 2L15 22L11 13M11 13L2 9L22 2" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+    </button>
+  </div>
+</div>
+
+<!-- PITCH ACCESS MODAL -->
+<div id="pitchModal" style="display:none;position:fixed;inset:0;z-index:2000;background:rgba(2,11,24,0.85);backdrop-filter:blur(8px);align-items:center;justify-content:center">
+  <div style="background:var(--bg-card);border:1px solid var(--border-hover);border-radius:24px;padding:2.5rem;max-width:400px;width:90%;text-align:center;position:relative">
+    <div style="font-size:3rem;margin-bottom:1rem">🔐</div>
+    <h3 style="font-size:1.3rem;font-weight:800;margin-bottom:0.5rem" data-en="Investor Access" data-ar="وصول المستثمرين">Investor Access</h3>
+    <p style="color:var(--text-secondary);font-size:0.88rem;margin-bottom:1.5rem" data-en="This document is for investors and strategic partners only. Enter the access code to continue." data-ar="هذا الملف مخصص للمستثمرين والشركاء الاستراتيجيين فقط. أدخل رمز الوصول للمتابعة.">This document is for investors and strategic partners only. Enter the access code to continue.</p>
+    <input id="pitchPassword" type="password" placeholder="Access code" style="width:100%;background:var(--input-bg);border:1px solid var(--border);border-radius:10px;padding:0.75rem 1rem;color:var(--text-primary);font-family:inherit;font-size:0.9rem;outline:none;margin-bottom:1rem;text-align:center;letter-spacing:0.2em" onkeypress="if(event.key==='Enter')submitPitch()">
+    <div id="pitchError" style="display:none;color:#ef4444;font-size:0.8rem;margin-bottom:0.75rem" data-en="Incorrect code. Contact us at lbmtech000@gmail.com to request access." data-ar="الرمز غير صحيح. تواصل معنا على lbmtech000@gmail.com لطلب الوصول.">Incorrect code. Contact us at lbmtech000@gmail.com to request access.</div>
+    <div style="display:flex;gap:0.75rem">
+      <button onclick="closePitchModal()" style="flex:1;padding:0.75rem;background:var(--input-bg);border:1px solid var(--border);border-radius:10px;color:var(--text-secondary);font-family:inherit;cursor:pointer" data-en="Cancel" data-ar="إلغاء">Cancel</button>
+      <button onclick="submitPitch()" style="flex:2;padding:0.75rem;background:var(--cyan);border:none;border-radius:10px;color:#fff;font-family:inherit;font-weight:700;cursor:pointer" data-en="Enter →" data-ar="دخول →">Enter →</button>
+    </div>
+    <div style="margin-top:1.25rem;font-size:0.75rem;color:var(--text-muted)">
+      <span data-en="Don't have the code?" data-ar="لا تملك الرمز؟">Don't have the code?</span>
+      <a href="mailto:lbmtech000@gmail.com" style="color:var(--cyan);text-decoration:none"> lbmtech000@gmail.com</a>
+    </div>
+  </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>

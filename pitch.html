@@ -1,0 +1,437 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="LBM Investor Pitch — Algerian deep-tech startup modernizing seawater desalination with IoT & AI.">
+  <meta name="robots" content="index, follow">
+  <meta property="og:title" content="LBM — Investor Pitch Deck">
+  <meta property="og:description" content="LBM Investor Pitch — Algerian deep-tech startup modernizing seawater desalination with IoT & AI.">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="https://lbm-tech-website.netlify.app/logo_lbm.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="LBM Smart Water Desalination Logo">
+  <meta property="og:url" content="https://lbm-tech-website.netlify.app/pitch.html">
+  <meta property="og:site_name" content="LBM Technology">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="LBM — Investor Pitch Deck">
+  <meta name="twitter:description" content="LBM Investor Pitch — Algerian deep-tech startup modernizing seawater desalination with IoT & AI.">
+  <meta name="twitter:image" content="https://lbm-tech-website.netlify.app/logo_lbm.png">
+  <title>LBM — Investor Pitch Deck</title>
+  <link rel="icon" type="image/png" href="logo_lbm.png">
+  <link rel="shortcut icon" type="image/png" href="logo_lbm.png">
+  <link rel="apple-touch-icon" href="logo_lbm.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Sora:wght@300;400;600;700;800&family=Noto+Sans+Arabic:wght@300;400;600;700&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <style>
+    .pitch-hero {
+      padding: 9rem 2rem 5rem; text-align: center;
+      background: radial-gradient(ellipse at 50% 0%, rgba(10,92,153,0.2) 0%, transparent 70%);
+      position: relative; overflow: hidden;
+    }
+    .pitch-hero::before {
+      content: ''; position: absolute; inset: 0;
+      background-image: linear-gradient(var(--border) 1px, transparent 1px),
+        linear-gradient(90deg, var(--border) 1px, transparent 1px);
+      background-size: 60px 60px;
+      mask-image: radial-gradient(ellipse at 50% 0%, black 20%, transparent 65%);
+    }
+    .pitch-hero-content { position: relative; z-index: 2; max-width: 760px; margin: 0 auto; }
+    .pitch-hero h1 { font-size: clamp(2.2rem,5vw,3.8rem); font-weight: 800; letter-spacing: -0.03em; margin: 1rem 0; line-height: 1.1; }
+    .pitch-hero p { font-size: 1.05rem; color: var(--text-secondary); max-width: 580px; margin: 0 auto 2.5rem; line-height: 1.8; }
+    .pitch-meta { display: flex; justify-content: center; gap: 2rem; flex-wrap: wrap; margin-bottom: 2.5rem; }
+    .pitch-meta-item { font-family: 'JetBrains Mono', monospace; font-size: 0.78rem; color: var(--text-muted); }
+    .pitch-meta-item span { color: var(--cyan); font-weight: 700; }
+    .pitch-cta { display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; }
+
+    /* SLIDE GRID */
+    .pitch-slides { padding: 4rem 0 6rem; }
+    .slide {
+      max-width: 900px; margin: 0 auto 3rem;
+      background: var(--bg-card); border: 1px solid var(--border);
+      border-radius: 24px; overflow: hidden;
+      transition: border-color 0.3s;
+    }
+    .slide:hover { border-color: var(--border-hover); }
+    .slide-header {
+      padding: 1.25rem 2rem;
+      background: var(--monitor-bar-bg);
+      border-bottom: 1px solid var(--border);
+      display: flex; align-items: center; justify-content: space-between;
+    }
+    .slide-num { font-family: 'JetBrains Mono', monospace; font-size: 0.72rem; color: var(--text-muted); }
+    .slide-title { font-size: 1rem; font-weight: 700; }
+    .slide-body { padding: 2.5rem; }
+
+    /* PROBLEM slide */
+    .problem-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 1rem; }
+    .problem-card {
+      background: rgba(239,68,68,0.06); border: 1px solid rgba(239,68,68,0.2);
+      border-radius: 14px; padding: 1.5rem; text-align: center;
+    }
+    .problem-icon { font-size: 2.2rem; margin-bottom: 0.75rem; }
+    .problem-card h4 { font-size: 0.9rem; font-weight: 700; margin-bottom: 0.4rem; color: #f87171; }
+    .problem-card p { font-size: 0.8rem; color: var(--text-secondary); line-height: 1.6; }
+
+    /* SOLUTION slide */
+    .solution-grid { display: grid; grid-template-columns: repeat(2,1fr); gap: 1.25rem; }
+    .sol-card {
+      background: var(--cyan-dim); border: 1px solid var(--border-hover);
+      border-radius: 14px; padding: 1.5rem;
+      display: flex; gap: 1rem; align-items: flex-start;
+    }
+    .sol-icon { font-size: 1.8rem; flex-shrink: 0; }
+    .sol-card h4 { font-size: 0.88rem; font-weight: 700; margin-bottom: 0.35rem; color: var(--cyan); }
+    .sol-card p { font-size: 0.8rem; color: var(--text-secondary); line-height: 1.6; }
+
+    /* MARKET slide */
+    .market-numbers { display: grid; grid-template-columns: repeat(3,1fr); gap: 1.5rem; margin-bottom: 1.5rem; }
+    .market-num { text-align: center; }
+    .market-num .big { font-size: 2.5rem; font-weight: 800; color: var(--cyan); font-family: 'JetBrains Mono', monospace; line-height: 1; }
+    .market-num small { font-size: 0.78rem; color: var(--text-secondary); margin-top: 0.3rem; display: block; }
+    .market-bar-wrap { margin-top: 1rem; }
+    .market-bar-label { display: flex; justify-content: space-between; font-size: 0.75rem; color: var(--text-muted); margin-bottom: 0.3rem; }
+    .market-bar-track { height: 8px; background: var(--monitor-bar-bg); border-radius: 4px; overflow: hidden; margin-bottom: 0.75rem; }
+    .market-bar-fill { height: 100%; border-radius: 4px; background: linear-gradient(90deg, var(--cyan), #4d9fff); }
+
+    /* TRACTION slide */
+    .traction-list { display: flex; flex-direction: column; gap: 0.85rem; }
+    .traction-item {
+      display: flex; align-items: center; gap: 1rem;
+      background: var(--input-bg); border: 1px solid var(--border);
+      border-radius: 12px; padding: 1rem 1.25rem;
+    }
+    .traction-check {
+      width: 32px; height: 32px; min-width: 32px;
+      border-radius: 50%; display: flex; align-items: center; justify-content: center;
+      font-size: 0.9rem; font-weight: 700;
+    }
+    .traction-check.done { background: rgba(34,197,94,0.15); color: #22c55e; border: 1px solid rgba(34,197,94,0.3); }
+    .traction-check.progress { background: rgba(250,200,0,0.1); color: #fac800; border: 1px solid rgba(250,200,0,0.3); }
+    .traction-check.future { background: var(--cyan-dim); color: var(--text-muted); border: 1px solid var(--border); }
+    .traction-item p { font-size: 0.88rem; margin: 0; }
+    .traction-item small { color: var(--text-muted); font-size: 0.75rem; font-family: 'JetBrains Mono', monospace; }
+
+    /* BUSINESS MODEL */
+    .biz-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 1rem; }
+    .biz-card {
+      border: 1px solid var(--border); border-radius: 14px; padding: 1.5rem; text-align: center;
+      background: var(--bg-card);
+    }
+    .biz-card .biz-icon { font-size: 2rem; margin-bottom: 0.75rem; }
+    .biz-card h4 { font-size: 0.88rem; font-weight: 700; color: var(--cyan); margin-bottom: 0.4rem; }
+    .biz-card p { font-size: 0.78rem; color: var(--text-secondary); line-height: 1.6; }
+    .biz-card .biz-rev { font-family: 'JetBrains Mono', monospace; font-size: 0.72rem; color: var(--text-muted); margin-top: 0.5rem; }
+
+    /* TEAM */
+    .team-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 1.25rem; }
+    .team-card {
+      border: 1px solid var(--border); border-radius: 16px; padding: 1.75rem; text-align: center;
+      background: var(--bg-card);
+    }
+    .team-avatar {
+      width: 64px; height: 64px; border-radius: 50%;
+      background: var(--cyan-dim); border: 2px solid var(--border-hover);
+      display: flex; align-items: center; justify-content: center;
+      font-size: 1.8rem; margin: 0 auto 1rem;
+    }
+    .team-card h4 { font-size: 0.9rem; font-weight: 700; margin-bottom: 0.25rem; }
+    .team-card .team-role { font-size: 0.75rem; color: var(--cyan); font-weight: 600; margin-bottom: 0.5rem; font-family: 'JetBrains Mono', monospace; }
+    .team-card p { font-size: 0.78rem; color: var(--text-secondary); line-height: 1.6; }
+
+    /* ASK */
+    .ask-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; align-items: start; }
+    .ask-amount { text-align: center; }
+    .ask-amount .big-ask { font-size: 3.5rem; font-weight: 800; color: var(--cyan); font-family: 'JetBrains Mono', monospace; line-height: 1; }
+    .ask-amount small { color: var(--text-muted); font-size: 0.82rem; }
+    .ask-use { display: flex; flex-direction: column; gap: 0.75rem; }
+    .ask-item { display: flex; align-items: center; gap: 0.75rem; }
+    .ask-bar-track { flex: 1; height: 6px; background: var(--monitor-bar-bg); border-radius: 3px; overflow: hidden; }
+    .ask-bar-fill { height: 100%; border-radius: 3px; background: var(--cyan); }
+    .ask-item-label { font-size: 0.8rem; color: var(--text-secondary); min-width: 160px; }
+    .ask-item-pct { font-family: 'JetBrains Mono', monospace; font-size: 0.75rem; color: var(--cyan); min-width: 36px; text-align: right; }
+
+    /* CONTACT CTA */
+    .pitch-contact {
+      text-align: center; padding: 4rem 2rem;
+      background: linear-gradient(135deg, rgba(10,92,153,0.1), transparent);
+      border: 1px solid var(--border-hover); border-radius: 24px;
+      max-width: 620px; margin: 0 auto;
+    }
+    .pitch-contact h2 { font-size: 1.8rem; font-weight: 800; margin-bottom: 0.75rem; }
+    .pitch-contact p { color: var(--text-secondary); margin-bottom: 2rem; line-height: 1.7; }
+    .pitch-contact-btns { display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; }
+
+    @media (max-width: 700px) {
+      .problem-grid, .solution-grid, .market-numbers,
+      .biz-grid, .team-grid, .ask-grid { grid-template-columns: 1fr; }
+      .slide-body { padding: 1.5rem; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- NAVBAR -->
+<nav class="navbar" id="navbar">
+  <div class="nav-container">
+    <a href="index.html" class="nav-logo">
+      <img src="logo_lbm.png" alt="LBM Logo" class="nav-logo-img">
+    </a>
+    <div class="nav-links" id="navLinks">
+      <a href="index.html" data-en="← Back to Website" data-ar="→ العودة للموقع">← Back to Website</a>
+      <a href="#problem"   data-en="Problem"     data-ar="المشكلة">Problem</a>
+      <a href="#solution"  data-en="Solution"    data-ar="الحل">Solution</a>
+      <a href="#market"    data-en="Market"      data-ar="السوق">Market</a>
+      <a href="#traction"  data-en="Traction"    data-ar="التقدم">Traction</a>
+      <a href="#team"      data-en="Team"        data-ar="الفريق">Team</a>
+      <a href="#ask"       data-en="The Ask"     data-ar="طلب الاستثمار">The Ask</a>
+    </div>
+    <div class="nav-actions">
+      <button class="theme-toggle" id="themeToggle" onclick="toggleTheme()" aria-label="Toggle theme">🌙</button>
+      <button class="lang-toggle"  id="langToggle"  onclick="toggleLang()">عربي</button>
+      <button class="menu-btn"     id="menuBtn"     onclick="toggleMenu()">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+</nav>
+
+<!-- HERO -->
+<div class="pitch-hero">
+  <div class="pitch-hero-content">
+    <div class="hero-badge" data-en="🇩🇿 Investor Pitch · 2025" data-ar="🇩🇿 ملف المستثمرين · 2025">🇩🇿 Investor Pitch · 2025</div>
+    <h1 data-en="Modernizing Africa's Desalination Infrastructure with IoT & AI" data-ar="تحديث بنية التحلية الأفريقية بإنترنت الأشياء والذكاء الاصطناعي">Modernizing Africa's Desalination Infrastructure with IoT & AI</h1>
+    <p data-en="LBM is an Algerian deep-tech startup in Year 1, solving a critical infrastructure problem — and building the technology layer that will power clean water across Africa." data-ar="LBM ستارت آب جزائري عميق التقنية في سنته الأولى، يحل مشكلة بنية تحتية حرجة — ويبني طبقة التكنولوجيا التي ستُشغّل المياه النظيفة عبر أفريقيا.">LBM is an Algerian deep-tech startup in Year 1, solving a critical infrastructure problem — and building the technology layer that will power clean water across Africa.</p>
+    <div class="pitch-meta">
+      <div class="pitch-meta-item">Stage: <span data-en="Pre-Seed / Seed" data-ar="ما قبل البذرة / البذرة">Pre-Seed / Seed</span></div>
+      <div class="pitch-meta-item">Founded: <span>2025 · Sétif, Algeria 🇩🇿</span></div>
+      <div class="pitch-meta-item">Sector: <span data-en="Water Tech / IoT / AI" data-ar="تقنية المياه / IoT / ذكاء اصطناعي">Water Tech / IoT / AI</span></div>
+    </div>
+    <div class="pitch-cta">
+      <a href="#ask" class="btn btn-primary" data-en="Jump to The Ask" data-ar="انتقل إلى طلب الاستثمار">Jump to The Ask</a>
+      <a href="mailto:lbmtech000@gmail.com" class="btn btn-outline" data-en="Contact the Founders" data-ar="تواصل مع المؤسسين">Contact the Founders</a>
+    </div>
+  </div>
+</div>
+
+<div class="pitch-slides">
+  <div class="container">
+
+    <!-- PROBLEM -->
+    <div class="slide" id="problem">
+      <div class="slide-header">
+        <span class="slide-num">01 / 07</span>
+        <span class="slide-title" data-en="The Problem" data-ar="المشكلة">The Problem</span>
+        <span class="slide-num" data-en="Critical Infrastructure Gap" data-ar="فجوة في البنية التحتية الحرجة">Critical Infrastructure Gap</span>
+      </div>
+      <div class="slide-body">
+        <div class="problem-grid">
+          <div class="problem-card">
+            <div class="problem-icon">🔇</div>
+            <h4 data-en="Running Blind" data-ar="تعمل بشكل أعمى">Running Blind</h4>
+            <p data-en="Most desalination plants in Algeria and North Africa have no real-time monitoring. Operators manage by manual inspection — slow, inaccurate, and dangerous." data-ar="معظم محطات التحلية في الجزائر وشمال أفريقيا تفتقر للمراقبة الفورية. يعتمد المشغلون على الفحص اليدوي — بطيء وغير دقيق وخطير.">Most desalination plants in Algeria have no real-time monitoring. Operators rely on manual inspection — slow, inaccurate, dangerous.</p>
+          </div>
+          <div class="problem-card">
+            <div class="problem-icon">⚠️</div>
+            <h4 data-en="Reactive Failures" data-ar="أعطال تفاعلية">Reactive Failures</h4>
+            <p data-en="Without predictive tools, equipment fails unexpectedly. A single unplanned shutdown can cut water supply to thousands of households for days." data-ar="بدون أدوات تنبؤية، تتعطل المعدات بشكل غير متوقع. توقف مفاجئ واحد قد يقطع إمدادات المياه عن آلاف الأسر لأيام.">Without predictive tools, equipment fails unexpectedly. A single shutdown can cut water supply to thousands of households for days.</p>
+          </div>
+          <div class="problem-card">
+            <div class="problem-icon">⚡</div>
+            <h4 data-en="Energy Waste" data-ar="إهدار الطاقة">Energy Waste</h4>
+            <p data-en="Desalination is energy-intensive. Without optimization, plants consume 15–30% more energy than necessary — a massive avoidable cost." data-ar="التحلية عملية كثيفة استهلاك الطاقة. بدون تحسين، تستهلك المحطات 15-30% طاقة أكثر مما هو ضروري — تكلفة ضخمة يمكن تجنبها.">Desalination is energy-intensive. Without optimization, plants consume 15–30% more energy than necessary.</p>
+          </div>
+        </div>
+        <div style="margin-top:1.5rem;padding:1.25rem;background:rgba(239,68,68,0.05);border:1px solid rgba(239,68,68,0.2);border-radius:12px;font-size:0.88rem;color:var(--text-secondary);text-align:center">
+          <strong style="color:#f87171" data-en="Algeria alone has 11+ major seawater desalination plants supplying millions of people — and most have no digital monitoring layer." data-ar="الجزائر وحدها لديها 11+ محطة تحلية كبرى تمد الملايين بالمياه — ومعظمها لا يمتلك أي طبقة مراقبة رقمية.">Algeria alone has 11+ major seawater desalination plants supplying millions of people — and most have no digital monitoring layer.</strong>
+        </div>
+      </div>
+    </div>
+
+    <!-- SOLUTION -->
+    <div class="slide" id="solution">
+      <div class="slide-header">
+        <span class="slide-num">02 / 07</span>
+        <span class="slide-title" data-en="Our Solution" data-ar="حلنا">Our Solution</span>
+        <span class="slide-num">LBM Platform</span>
+      </div>
+      <div class="slide-body">
+        <p style="color:var(--text-secondary);margin-bottom:1.5rem;font-size:0.92rem" data-en="LBM is the technology layer that makes any desalination plant smart — without replacing existing equipment." data-ar="LBM هي طبقة التكنولوجيا التي تجعل أي محطة تحلية ذكية — دون استبدال المعدات القائمة.">LBM is the technology layer that makes any desalination plant smart — without replacing existing equipment.</p>
+        <div class="solution-grid">
+          <div class="sol-card"><div class="sol-icon">🔌</div><div><h4 data-en="IoT Sensor Networks" data-ar="شبكات استشعار IoT">IoT Sensor Networks</h4><p data-en="Modular sensors installed on existing equipment — monitoring 200+ parameters in real time." data-ar="أجهزة استشعار معيارية على المعدات القائمة — تراقب 200+ معامل فورياً.">Modular sensors installed on existing equipment — monitoring 200+ parameters in real time.</p></div></div>
+          <div class="sol-card"><div class="sol-icon">📊</div><div><h4 data-en="Remote Monitoring Dashboard" data-ar="لوحة مراقبة عن بُعد">Remote Monitoring Dashboard</h4><p data-en="Web & mobile dashboard — full operational visibility from anywhere, instant alerts." data-ar="لوحة ويب وموبايل — رؤية تشغيلية كاملة من أي مكان، تنبيهات فورية.">Web & mobile dashboard — full operational visibility from anywhere, instant alerts.</p></div></div>
+          <div class="sol-card"><div class="sol-icon">🤖</div><div><h4 data-en="Predictive Maintenance AI" data-ar="صيانة تنبؤية بالذكاء الاصطناعي">Predictive Maintenance AI</h4><p data-en="(2026) AI that detects anomalies and predicts failures days in advance — preventing shutdowns." data-ar="(2026) ذكاء اصطناعي يكشف الشذوذات ويتنبأ بالأعطال مسبقاً — يمنع التوقف.">AI that detects anomalies and predicts failures days in advance — preventing shutdowns. (2026)</p></div></div>
+          <div class="sol-card"><div class="sol-icon">⚡</div><div><h4 data-en="Energy Optimization" data-ar="تحسين الطاقة">Energy Optimization</h4><p data-en="Algorithms that cut energy waste by up to 25% — turning efficiency into direct cost savings." data-ar="خوارزميات تخفض هدر الطاقة بنسبة تصل إلى 25% — تحول الكفاءة إلى توفير مباشر للتكاليف.">Algorithms that cut energy waste by up to 25% — turning efficiency into direct cost savings.</p></div></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- MARKET -->
+    <div class="slide" id="market">
+      <div class="slide-header">
+        <span class="slide-num">03 / 07</span>
+        <span class="slide-title" data-en="Market Opportunity" data-ar="فرصة السوق">Market Opportunity</span>
+        <span class="slide-num">TAM / SAM / SOM</span>
+      </div>
+      <div class="slide-body">
+        <div class="market-numbers">
+          <div class="market-num"><div class="big">$12B+</div><small data-en="African water tech market by 2030" data-ar="سوق تقنية المياه الأفريقية بحلول 2030">African water tech market by 2030</small></div>
+          <div class="market-num"><div class="big">11+</div><small data-en="Major desalination plants in Algeria alone" data-ar="محطات تحلية كبرى في الجزائر وحدها">Major desalination plants in Algeria alone</small></div>
+          <div class="market-num"><div class="big">54</div><small data-en="African countries — future addressable market" data-ar="دول أفريقية — السوق القابل للعنونة مستقبلاً">African countries — future addressable market</small></div>
+        </div>
+        <div class="market-bar-wrap">
+          <div class="market-bar-label"><span data-en="TAM — Total African Water Tech" data-ar="TAM — إجمالي تقنية المياه الأفريقية">TAM — Total African Water Tech</span><span>$12B+</span></div>
+          <div class="market-bar-track"><div class="market-bar-fill" style="width:100%"></div></div>
+          <div class="market-bar-label"><span data-en="SAM — North Africa Desalination IoT" data-ar="SAM — IoT تحلية شمال أفريقيا">SAM — North Africa Desalination IoT</span><span>~$800M</span></div>
+          <div class="market-bar-track"><div class="market-bar-fill" style="width:65%;background:linear-gradient(90deg,#4d9fff,var(--cyan))"></div></div>
+          <div class="market-bar-label"><span data-en="SOM — Algeria (Year 1–3 focus)" data-ar="SOM — الجزائر (التركيز في السنة 1–3)">SOM — Algeria (Year 1–3 focus)</span><span>~$40M</span></div>
+          <div class="market-bar-track"><div class="market-bar-fill" style="width:30%;background:#22c55e"></div></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- TRACTION -->
+    <div class="slide" id="traction">
+      <div class="slide-header">
+        <span class="slide-num">04 / 07</span>
+        <span class="slide-title" data-en="Traction & Roadmap" data-ar="التقدم وخارطة الطريق">Traction & Roadmap</span>
+        <span class="slide-num" data-en="Where We Are" data-ar="أين نحن">Where We Are</span>
+      </div>
+      <div class="slide-body">
+        <div class="traction-list">
+          <div class="traction-item"><div class="traction-check done">✓</div><div><p data-en="IoT monitoring platform built and deployed (web + Android)" data-ar="منصة المراقبة IoT مبنية ومنشورة (ويب + أندرويد)">IoT monitoring platform built and deployed (web + Android)</p><small data-en="Completed · 2025" data-ar="مكتمل · 2025">Completed · 2025</small></div></div>
+          <div class="traction-item"><div class="traction-check done">✓</div><div><p data-en="First pilot plant identified in Algeria — site assessment phase" data-ar="تحديد أول محطة تجريبية في الجزائر — مرحلة التقييم الميداني">First pilot plant identified in Algeria — site assessment phase</p><small data-en="In Progress · 2025" data-ar="جارٍ · 2025">In Progress · 2025</small></div></div>
+          <div class="traction-item"><div class="traction-check progress">⟶</div><div><p data-en="First live deployment — sensors installed, data flowing" data-ar="أول نشر مباشر — أجهزة الاستشعار مثبتة والبيانات تتدفق">First live deployment — sensors installed, data flowing</p><small data-en="Target: Q1 2026" data-ar="الهدف: الربع الأول 2026">Target: Q1 2026</small></div></div>
+          <div class="traction-item"><div class="traction-check progress">⟶</div><div><p data-en="3+ pilot plants operational across Algeria" data-ar="3+ محطات تجريبية تعمل في الجزائر">3+ pilot plants operational across Algeria</p><small data-en="Target: Q3 2026" data-ar="الهدف: الربع الثالث 2026">Target: Q3 2026</small></div></div>
+          <div class="traction-item"><div class="traction-check future">◈</div><div><p data-en="Predictive maintenance AI — beta launch" data-ar="الصيانة التنبؤية بالذكاء الاصطناعي — الإطلاق التجريبي">Predictive maintenance AI — beta launch</p><small data-en="Target: 2026" data-ar="الهدف: 2026">Target: 2026</small></div></div>
+          <div class="traction-item"><div class="traction-check future">◈</div><div><p data-en="Expand to Tunisia, Morocco, Libya — North Africa" data-ar="التوسع إلى تونس والمغرب وليبيا — شمال أفريقيا">Expand to Tunisia, Morocco, Libya — North Africa</p><small data-en="Target: 2027" data-ar="الهدف: 2027">Target: 2027</small></div></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- BUSINESS MODEL -->
+    <div class="slide">
+      <div class="slide-header">
+        <span class="slide-num">05 / 07</span>
+        <span class="slide-title" data-en="Business Model" data-ar="نموذج العمل">Business Model</span>
+        <span class="slide-num">Revenue Streams</span>
+      </div>
+      <div class="slide-body">
+        <div class="biz-grid">
+          <div class="biz-card"><div class="biz-icon">🔌</div><h4 data-en="Installation Fee" data-ar="رسوم التثبيت">Installation Fee</h4><p data-en="One-time fee for IoT hardware installation and system integration per plant." data-ar="رسوم لمرة واحدة لتثبيت معدات IoT وتكامل النظام لكل محطة.">One-time fee for IoT hardware installation and system integration per plant.</p><div class="biz-rev" data-en="Per project · fixed fee" data-ar="لكل مشروع · رسوم ثابتة">Per project · fixed fee</div></div>
+          <div class="biz-card" style="border-color:rgba(0,212,255,0.3)"><div class="biz-icon">📡</div><h4 data-en="SaaS Subscription" data-ar="اشتراك SaaS">SaaS Subscription</h4><p data-en="Monthly/annual subscription for platform access, dashboard, alerts, and AI features." data-ar="اشتراك شهري/سنوي للوصول إلى المنصة ولوحة التحكم والتنبيهات وميزات الذكاء الاصطناعي.">Monthly/annual subscription for platform access, dashboard, alerts, and AI features.</p><div class="biz-rev" data-en="Recurring · MRR model" data-ar="متكرر · نموذج MRR">Recurring · MRR model</div></div>
+          <div class="biz-card"><div class="biz-icon">🤝</div><h4 data-en="Consulting & Maintenance" data-ar="استشارات وصيانة">Consulting & Maintenance</h4><p data-en="On-site assessments, training, annual maintenance contracts, and technical support." data-ar="تقييمات ميدانية وتدريب وعقود صيانة سنوية ودعم تقني.">On-site assessments, training, annual maintenance contracts, and technical support.</p><div class="biz-rev" data-en="Per engagement / contract" data-ar="لكل مشاركة / عقد">Per engagement / contract</div></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- TEAM -->
+    <div class="slide" id="team">
+      <div class="slide-header">
+        <span class="slide-num">06 / 07</span>
+        <span class="slide-title" data-en="The Team" data-ar="الفريق">The Team</span>
+        <span class="slide-num" data-en="Built in Algeria" data-ar="بُني في الجزائر">Built in Algeria</span>
+      </div>
+      <div class="slide-body">
+        <div class="team-grid">
+          <div class="team-card">
+            <div class="team-avatar">👨‍💻</div>
+            <h4>Boukhalfa Zakaria</h4>
+            <div class="team-role" data-en="Founder & CEO · Strategy · Business Development" data-ar="المؤسس والمدير التنفيذي · الاستراتيجية · تطوير الأعمال">Founder & CEO · Strategy · Business Development</div>
+            <p data-en="Deep knowledge of the Algerian water infrastructure landscape and startup ecosystem." data-ar="معرفة عميقة بالمشهد الجزائري للبنية التحتية للمياه ومنظومة الشركات الناشئة.">Deep knowledge of the Algerian water infrastructure and startup ecosystem.</p>
+          </div>
+          <div class="team-card">
+            <div class="team-avatar">👨‍🔬</div>
+            <h4>Meliani Mohamed Yasser</h4>
+            <div class="team-role" data-en="Co-Founder & CTO · IoT · Software · AI" data-ar="المؤسس المشارك والمدير التقني · IoT · برمجيات · ذكاء اصطناعي">Co-Founder & CTO · IoT · Software · AI</div>
+            <p data-en="Led development of the IoT platform and monitoring dashboard. Background in embedded systems and ML." data-ar="قاد تطوير منصة IoT ولوحة المراقبة. خلفية في الأنظمة المدمجة والتعلم الآلي.">Led development of the IoT platform. Background in embedded systems and machine learning.</p>
+          </div>
+          <div class="team-card">
+            <div class="team-avatar">👷</div>
+            <h4>Laib Abdelmoumen</h4>
+            <div class="team-role" data-en="Lead Engineer · Water Systems · Hardware" data-ar="المهندس الرئيسي · أنظمة المياه · العتاد">Lead Engineer · Water Systems · Hardware</div>
+            <p data-en="Field engineering expertise in desalination plant operations and IoT hardware deployment." data-ar="خبرة هندسية ميدانية في عمليات محطات التحلية ونشر عتاد IoT.">Field engineering expertise in desalination plant operations and IoT hardware deployment.</p>
+          </div>
+        </div>
+        <div style="margin-top:1.5rem;text-align:center;font-size:0.82rem;color:var(--text-muted)">
+          🇩🇿 <span data-en="100% Algerian founding team · Based in Sétif · Open to expanding the team with the right talent" data-ar="فريق تأسيسي جزائري 100% · مقره سطيف · منفتحون على توسيع الفريق بالمواهب المناسبة">100% Algerian founding team · Based in Sétif · Open to expanding with the right talent</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- THE ASK -->
+    <div class="slide" id="ask">
+      <div class="slide-header">
+        <span class="slide-num">07 / 07</span>
+        <span class="slide-title" data-en="The Ask" data-ar="طلب الاستثمار">The Ask</span>
+        <span class="slide-num">Pre-Seed / Seed Round</span>
+      </div>
+      <div class="slide-body">
+        <div class="ask-grid">
+          <div class="ask-amount">
+            <div style="font-size:0.78rem;color:var(--text-muted);margin-bottom:0.5rem;font-family:'JetBrains Mono',monospace" data-en="Seeking" data-ar="نبحث عن">Seeking</div>
+            <div class="big-ask">$200K</div>
+            <small data-en="Pre-Seed Round · Equity" data-ar="جولة ما قبل البذرة · حقوق ملكية">Pre-Seed Round · Equity</small>
+            <div style="margin-top:1.5rem;padding:1rem;background:var(--cyan-dim);border:1px solid var(--border-hover);border-radius:12px;font-size:0.82rem;color:var(--text-secondary)">
+              <span data-en="Open to strategic investors, angels, water-tech VCs, and Algerian institutional investors." data-ar="منفتحون على المستثمرين الاستراتيجيين والملائكة وصناديق تقنية المياه والمستثمرين المؤسسيين الجزائريين.">Open to strategic investors, angels, water-tech VCs, and Algerian institutional investors.</span>
+            </div>
+          </div>
+          <div>
+            <div style="font-size:0.82rem;font-weight:700;color:var(--text-secondary);margin-bottom:1rem" data-en="Use of Funds" data-ar="استخدام الأموال">Use of Funds</div>
+            <div class="ask-use">
+              <div class="ask-item">
+                <div class="ask-item-label" data-en="IoT Hardware & Deployment" data-ar="عتاد IoT والنشر">IoT Hardware & Deployment</div>
+                <div class="ask-bar-track"><div class="ask-bar-fill" style="width:40%"></div></div>
+                <div class="ask-item-pct">40%</div>
+              </div>
+              <div class="ask-item">
+                <div class="ask-item-label" data-en="AI / Software R&D" data-ar="بحث وتطوير الذكاء الاصطناعي">AI / Software R&D</div>
+                <div class="ask-bar-track"><div class="ask-bar-fill" style="width:30%;background:#4d9fff"></div></div>
+                <div class="ask-item-pct" style="color:#4d9fff">30%</div>
+              </div>
+              <div class="ask-item">
+                <div class="ask-item-label" data-en="Team Expansion" data-ar="توسيع الفريق">Team Expansion</div>
+                <div class="ask-bar-track"><div class="ask-bar-fill" style="width:20%;background:#00c9a7"></div></div>
+                <div class="ask-item-pct" style="color:#00c9a7">20%</div>
+              </div>
+              <div class="ask-item">
+                <div class="ask-item-label" data-en="Operations & Legal" data-ar="العمليات والقانوني">Operations & Legal</div>
+                <div class="ask-bar-track"><div class="ask-bar-fill" style="width:10%;background:#f97316"></div></div>
+                <div class="ask-item-pct" style="color:#f97316">10%</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- CONTACT CTA -->
+    <div class="pitch-contact">
+      <div style="font-size:3rem;margin-bottom:1rem">🤝</div>
+      <h2 data-en="Let's Talk" data-ar="لنتحدث">Let's Talk</h2>
+      <p data-en="If you're an investor, strategic partner, or water authority interested in LBM — we want to hear from you. We respond within 48 hours." data-ar="إذا كنت مستثمراً أو شريكاً استراتيجياً أو سلطة مياه مهتمة بـ LBM — نريد سماعك. نرد خلال 48 ساعة.">If you're an investor, strategic partner, or water authority interested in LBM — we want to hear from you. We respond within 48 hours.</p>
+      <div class="pitch-contact-btns">
+        <a href="mailto:lbmtech000@gmail.com" class="btn btn-primary">📧 lbmtech000@gmail.com</a>
+        <a href="https://wa.me/213658660553" target="_blank" class="btn btn-outline">💬 WhatsApp</a>
+        <a href="index.html#contact" class="btn btn-outline" data-en="Contact Form" data-ar="نموذج التواصل">Contact Form</a>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="container">
+    <div class="footer-bottom">
+      <span>© 2025 LBM Technology · <span data-en="Confidential Investor Document" data-ar="وثيقة مستثمرين سرية">Confidential Investor Document</span></span>
+      <a href="index.html" style="color:var(--cyan);text-decoration:none" data-en="← Back to Website" data-ar="→ العودة للموقع">← Back to Website</a>
+    </div>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
