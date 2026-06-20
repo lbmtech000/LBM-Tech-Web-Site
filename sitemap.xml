@@ -2,23 +2,23 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
         xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>https://lbm-tech-website.netlify.app/</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://lbm-tech-website.netlify.app/"/>
-    <xhtml:link rel="alternate" hreflang="ar" href="https://lbm-tech-website.netlify.app/"/>
+    <loc>https://lbm-tech.netlify.app/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://lbm-tech.netlify.app/"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://lbm-tech.netlify.app/"/>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
-    <lastmod>2026-06-06</lastmod>
+    <lastmod>2026-06-20</lastmod>
   </url>
   <url>
-    <loc>https://lbm-tech-website.netlify.app/downloads.html</loc>
+    <loc>https://lbm-tech.netlify.app/downloads.html</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
-    <lastmod>2026-06-06</lastmod>
+    <lastmod>2026-06-20</lastmod>
   </url>
   <url>
-    <loc>https://lbm-tech-website.netlify.app/pitch.html</loc>
+    <loc>https://lbm-tech.netlify.app/pitch.html</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
-    <lastmod>2026-06-06</lastmod>
+    <lastmod>2026-06-20</lastmod>
   </url>
 </urlset>
